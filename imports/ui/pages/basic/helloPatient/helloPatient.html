@@ -1,0 +1,23 @@
+<template name="helloPatient">
+	<div class="container">
+		<div class="col-md-3" role="navigation">
+			<div>
+				<h3>Hello Patient Tutorial</h3>
+				<small style="padding-top:0px">Build your first FHIR app</small>
+			</div>
+			<hr>
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation" data-template="HPintro" class="active"><a href="#">Introduction</a></li>
+				<li role="presentation" data-template="HPstep1"><a href="#">Step 1: Web Page Creation</a></li>
+				<li role="presentation" data-template="HPstep2"><a href="#">Step 2: FHIR Server Query</a></li>
+				<li role="presentation" data-template="HPstep3"><a href="#">Step 3: Displaying FHIR Data</a></li>
+				<li role="presentation" data-template="HPstep4"><a href="#">Step 4: Building a Patient List</a></li>
+				<li role="presentation" data-template="HPstep5"><a href="#">Step 5: Viewing Patient Data</a></li>
+				<li role="presentation" data-template="HPfinishedCode"><a href="#">Finished Code</a></li>
+			</ul>
+		</div>
+		<div class="col-md-9" style="font-family: Century Gothic, sans-serif;">
+			{{> Template.dynamic template=HPstep}}
+		</div>
+	</div>
+</template>

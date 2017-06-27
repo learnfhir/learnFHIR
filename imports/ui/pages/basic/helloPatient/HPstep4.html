@@ -1,0 +1,62 @@
+<template name="HPstep4">
+	<div>
+		<h2 class="text-center">Step 4: Building a Patient List</h2>
+		<hr>
+{{#markdown}}
+To make this information truly useful, lets build a patient list on our web page using the results of our FHIR query. To ensure that we get consistent results, lets make our FHIR query a bit more specific. The SIIM hackathon FHIR server contains a set of simulated patients all with the family name of "SIIM". To search for and find only those patients with a surname of "SIIM" we can specify additional search parameters in our FHIR query. 
+
+Edit the FHIRquery.open URL so that it looks like this:
+
+`https://api.hackathon.siim.org/fhir/Patient?name=SIIM`
+
+Save your file and refresh the web page. You should now only get a FHIR response bundle containing five patients.
+
+<img src="./img/helloPatient/FHIRnameSIIM.png" height="450px"/>
+
+Now lets find the names of each of these patients. To do this we can drill down into the FHIR JSON response in the JavaScript console window until we find the information we are looking for. In this case it is buried several layers deep in entry->resource->name->given and entry->resource->name->family.
+
+<img src="./img/helloPatient/JSONnameExplored.png" height="450px"/>
+
+To create a patient list in the web browser rather than a text data dump a few  changes to our code are needed. We will create a new JSON object called "patientList" as well as a new function called "patientListDisplay()". Add the following code snippit to the beginning of your `<script>` section:
+
+```javascript
+let patientList = {}
+
+function patientListDisplay() {
+	for (patient in patientList.entry) {
+		let firstName = patientList.entry[patient].resource.name[0].given
+		let lastName = patientList.entry[patient].resource.name[0].family
+		$("#htmlList").append("<li style='cursor: pointer' id="
+			+ patient + " class='patientLink'><a href='#'>" 
+			+ firstName + " " + lastName + "</a></li>")
+	}
+}
+```
+
+In addition, we must define the patientList object and call the patientListDisplay function in order for the code to execute correctly. Delete the ```$("#data").html(FHIRquery.responseText)``` line from the `FHIRquery.onload()` function and replace it with the following code:
+
+```
+patientList = JSON.parse(FHIRquery.response)
+patientListDisplay()
+```
+
+We are almost there. If you were to save and refresh at this point you will see nothing output to the screen. That is because we have not yet defined the HTML element needed to display the list. 
+
+In the `<body>` section edit the `<p id="#data"></p>` line to instead say `<ul id='htmlList'>Patient List<hr></ul>`. Save and refresh and you should be rewarded with something like this:
+
+<img src="./img/helloPatient/PatientList.png" height="450px"/>
+{{/markdown}}
+		<div class="row" style="padding:10px 0px 10px 0px">
+			<div class="col-md-6">
+				<div class="text-center">
+					<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="text-center">
+					<a href="#"><button id="fwd" class="btn btn-lg btn-primary">Forward</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

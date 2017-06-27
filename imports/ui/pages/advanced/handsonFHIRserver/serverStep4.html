@@ -1,0 +1,51 @@
+<template name="serverStep4">
+	<div>
+		<h2 class="text-center">Step 4: Making Your First Query</h2>
+		<hr>
+		<div>
+			<p>To test if your server and access policies are working, open a new web browser window, and enter the FHIR endpoint URL for your personal AidBox. This will consist of the name you chose for your box plus ".aidbox.io/fhir/". For instance, the AidBox created for this website is <code>http://learnFHIR.aidbox.io/fhir</code></p>
+			<br>
+			<p>If you enter that into the address bar of your web browser you should see something like the following:</p>
+		</div>
+		<div class="row text-center">
+			<img src="/FHIRserver/browserquery.png" width="90%">
+		</div>
+		<br>
+		<div>
+			<p>The text you see displayed in the browser window is the Conformance Statement for your FHIR server. This is a data structure that tells anyone who is interested what FHIR Resources are available from your server (among other things).</p>
+			<br>
+			<p>If you can see the Conformance Statement, congratulations! You are up and running with your own private FHIR server. You are officially part of the future of healthcare interoperability.</p>
+			<br>
+			<p>AidBox also provides a slick interface for testing your RESTful endpoint (<code>http://[your-server-name]/fhir/</code>). If you return to the AidBox Dashboard and select "REST Console" from the left side menubar, you will see the following screen:</p>
+		</div>
+		<div class="row text-center">
+			<img src="/FHIRserver/firstFHIRquery.png" width="90%">
+		</div>
+		<br>
+		<div>
+			<p>AidBox also conveniently gives a number of sample FHIR resource interactions along the right hand side of the screen. Experimenting with those samples is a good way of becoming familiar with a wide variety of FHIR functions.</p>
+			<br>
+			<p>In the center of the screen is a dropdown list that allows you to choose from the standard RESTful interactions: GET, PUT, POST, DELETE. To retrieve information from a FHIR resource we want to select "GET". To GET a list of patients we point our FHIR URL at <code>/fhir/patient</code> and click the execute button (or control-enter). Try this in your server and you should see a screen like this:</p>
+		</div>
+		<div class="row text-center">
+			<img src="/FHIRserver/firstFHIRquery2.png" width="90%">
+		</div>
+		<br>
+		<p>You can see that the FHIR query returned a "Bundle" of information. However, this bundle returned a total of 0 objects. Why? Because we don't yet have any information in our FHIR database to find!</p>
+		<br>
+		<p>The last step in our tutorial will be putting some sample data onto the FHIR server, so when we do a query we have something to find.</p>
+	</div>
+	<hr>
+	<div class="row" style="padding:10px 0px 10px 0px">
+		<div class="col-md-6">
+			<div class="text-center">
+				<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="text-center">
+				<a href="#"><button id="fwd" class="btn btn-lg btn-primary">Forward</button></a>
+			</div>
+		</div>
+	</div>
+</template>

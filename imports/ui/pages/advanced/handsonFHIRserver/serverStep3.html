@@ -1,0 +1,39 @@
+<template name="serverStep3">
+	<div>
+		<h2 class="text-center">Step 3: Setting Access Policy</h2>
+		<hr>
+		<div class="row">
+			<p>The last piece of the puzzle to get your server up and running (so that you can easily access it from an outside client) is to set up the security policy. FHIR allows you to set the access policy on a resource by resource level. The policy that we will set up is blank, meaning that anyone, anywhere can connect to your server and read, write, and delete any data. This is obviously not the security policy you would use for a production server, but for playing in the sandbox, it is a perfect place to start.</p>
+			<br>
+			<p>Select "Security" from the left hand menu bar. You should see the following screen:</p>
+		</div>
+		<div class="row text-center">
+			<img src="/FHIRserver/createpolicy.png" width="90%">
+		</div>
+		<br>
+		<p>Give your new securty access policy an Id, Title, and Description. In the Policy box below, you want to enter one set of open and closed braces: <code>{}</code>. Then scroll to the bottom of the screen and select "Create".</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/createpolicy2.png" width="90%">
+		</div>
+		<br>
+		<p>You should now see the policy you've created show up in the Policy list. If you click on the title of your Policy in the list you will again see the Id, Title, Description, and policy code that you just created. You can make changes and save this policy again if needed.</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/createpolicy3.png" width="90%">
+		</div>
+		<br>
+		<p>Now that we opened all the doors to our server, proceed to the next step and let's take it for a test drive.</p>
+	</div>
+	<hr>
+	<div class="row" style="padding:10px 0px 10px 0px">
+		<div class="col-md-6">
+			<div class="text-center">
+				<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="text-center">
+				<a href="#"><button id="fwd" class="btn btn-lg btn-primary">Forward</button></a>
+			</div>
+		</div>
+	</div>
+</template>

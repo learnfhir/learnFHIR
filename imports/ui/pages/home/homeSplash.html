@@ -1,0 +1,44 @@
+<template name="homeSplash">
+	<h1 class="text-center">Welcome to Learn FHIR</h1>
+
+	<p>This website is dedicated to teaching you about Fast Healthcare Interoperability Resources (FHIR) from a basic description of what FHIR is to building your first FHIR web application. Use the menubar and tabs above to navigate through the basic and advanced lessons. Hopefully you will find the website useful and informative. Feedback is always appreciated.</p>
+	<!-- # Where to begin?
+
+	Imagine you work in a hospital Emergency Room and a new patient arrives with a broken arm. The patient will be entered into the electronic health record, checked into an examination room, seen by a nurse and physician, sent to radiology for an x-ray, have the bone put in a cast by an orthopedist, scheduled for a follow-up clinic appointment, and finally discharged home with a prescription for pain medication. At each step in this process information is created and exchanged between physicians, nurses, clinics, and hospital departments. -->
+
+	<hr>
+	<h2 class="text-center">Special Thank You to SIIM 2017 Attendees!</h2>
+	<div class="text-center">
+		<img src="siim2017_banner.jpg" width="80%">
+	</div>
+	<br><br>
+	<h3 class="text-center">See the results of the Pre and Post FHIR Intro session surveys <a id="surveyShow">here</a>.</h3>
+	<br>
+	<hr>
+
+	<div class="row">
+		<div class="col-md-6">
+			<h2>What's New:</h2>
+			<ul>
+				<li><a href="/handsonFHIRserver">Setting up your own FHIR server with AidBox.io</a></li>
+				<li><a href="/helloPatient">Hello Patient Tutorial</a></li>
+				<li><a href="http://github.com/learnfhir" target="_blank">New Public GitHub Repository</a></li>
+				<li>Twitter account - contact us @learnFHIR</li>
+			</ul>
+		</div>
+		<div class="col-md-6">
+		<h2>Coming Soon:</h2>
+		<ul>
+			<li>Advanced Tutorial - Creating a Client/Server FHIR application using Meteor</li>
+		</ul>
+		</div>
+	</div>
+	<hr>
+
+{{#markdown}}
+# How to use this website?
+
+This website is intended to give users a basic understanding of what FHIR is and how it works. With that foundation, users will then be able to experiment with building a FHIR query and a basic web based FHIR application, "Hello Patient!". Advanced lessons will dive deeper into web application development with FHIR, including SMART on FHIR security with OAuth2, and leave users with a boilerplate template to begin experimenting on their own.
+
+{{/markdown}}
+</template>

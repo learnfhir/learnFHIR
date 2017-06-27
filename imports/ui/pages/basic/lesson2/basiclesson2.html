@@ -1,0 +1,97 @@
+<template name="basiclesson2">
+	<div class="container">
+{{#markdown}}
+ 
+{{/markdown}}
+<p id="data">
+</p>
+
+<ul id="htmlList">Patient List<hr>
+</ul>
+
+<hr>
+
+<h3>Patient Information</h3>
+<p id="patientInfo"></p>
+
+<script>
+
+	let patientList = {}
+
+	function patientListDisplay(data) {
+		for (patient in patientList.entry) {
+			let firstName = patientList.entry[patient].resource.name[0].given
+			let lastName = patientList.entry[patient].resource.name[0].family
+			$("#htmlList").append("<li style='cursor: pointer' id=" + patient 
+				+ " class='patientLink'><a>" + firstName + " " + lastName + "</a></li>")
+		}
+		$('.patientLink').on('click', function(selectedPatient) {
+			patientDataDisplay(selectedPatient.currentTarget.id)
+		})
+	    //$('#data').html(data)
+	}
+
+	function patientDataDisplay(selectedPatient) {
+		let patientInfo = patientList.entry[selectedPatient].resource.text.div
+		$('#patientInfo').html(patientInfo)
+		console.log(patientInfo)
+	}
+
+	var FHIRquery = new XMLHttpRequest()
+
+	FHIRquery.open('GET', "https://api.hackathon.siim.org/fhir/Patient?name=SIIM", true)
+
+	FHIRquery.onload = function() {
+	    //console.log(FHIRquery.responseText)
+	    patientList = JSON.parse(FHIRquery.response)
+	    patientListDisplay()
+	}
+
+	FHIRquery.setRequestHeader("apikey", "HackathonOrientationSession")
+	FHIRquery.setRequestHeader("Accept", "application/json")
+	FHIRquery.send()
+	// function createCORSRequest(method, url) {
+	// 	var xhr = new XMLHttpRequest()
+	// 	if ("withCredentials" in xhr) {
+	// 		// XHR for Chrome/Firefox/Opera/Safari.
+	// 		xhr.open(method, url, true)
+	// 	} else if (typeof XDomainRequest != "undefined") {
+	// 		// XDomainRequest for IE.
+	// 		xhr = new XDomainRequest()
+	// 		xhr.open(method, url)
+	// 	} else {
+	// 		// CORS not supported.
+	// 		xhr = null
+	// 	}
+	// 	return xhr
+	// }
+
+	// function patientList(data) {
+	//     //$('#data').html(text)
+	// }
+
+	// function patientData(data) {
+
+	// }
+
+	// var xhr = createCORSRequest('GET', "https://api.hackathon.siim.org/fhir/Patient?name=Sally")
+	// if (!xhr) {
+	// 	throw new Error('CORS not supported')
+	// }
+
+	// xhr.onload = function() {
+	//     var text = xhr.responseText
+	//     console.log(JSON.parse(text))
+	// }
+
+	// xhr.onerror = function() {
+	// 	console.log('Error')
+	// }
+
+	// xhr.setRequestHeader("Accept", "application/json")
+	// xhr.setRequestHeader("apikey", "HackathonOrientationSession")
+	// xhr.send()
+
+</script>
+	</div>
+</template>

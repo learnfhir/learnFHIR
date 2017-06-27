@@ -1,0 +1,68 @@
+<template name="HPstep5">
+	<div>
+		<h2 class="text-center">Step 5: Viewing Patient Data</h2>
+		<hr>
+{{#markdown}}
+Every FHIR resource should contain a human readable representation of the data contained within it. In the final step of this tutorial we will display the text component for a patient selected from our patient list. This step will consist of three pieces:
+<ol>
+	<li>Create an HTML element to contain the patient data.</li>
+	<li>Add a function within the script to display the patient information dynamically</li>
+	<li>Recognize when a patient has been selected from the patient list and update the patient data display</li>
+</ol>
+
+For the first piece we will add a new set of HTML elements to contain our patient data. Below the patient list section in the `<body>` element of our webpage add the following HTML:
+
+```html
+<hr>
+
+<h3>Patient Information</h3>
+<p id="patientInfo"></p>
+```
+Next, lets add the necessary script code to fill the new HTML element in with a selected patient's information. Just like the patientListDisplay() function created earlier, we will make a new function dedicated to updating the patient information on the web page. Add the following `patientDataDisplay()` function below the `patientListDisplay()` function:
+
+```javascript
+function patientDataDisplay(selectedPatient) {
+	let patientInfo = patientList.entry[selectedPatient].resource.text.div
+	$('#patientInfo').html(patientInfo)
+}
+```
+
+Finally, we have to tell the script what to do when a patient link has been selected from the patient list. Add the following code beneath the for-loop within the `patientListDisplay()` function:
+
+```
+$('.patientLink').on('click', function(selectedPatient) {
+	patientDataDisplay(selectedPatient.currentTarget.id)
+})
+```
+
+Save the file and refresh your browser. You should now have the ability to both load the patient list from the FHIR server and to display information about each SIIM patient.
+
+<img src="./img/helloPatient/Finish.png" height="450px"/>
+
+<br>
+
+<h4 class="text-center"><b>Congratulations on finishing your first FHIR based web application!</b></h4>
+<p class="text-center">I hope this tutorial has been interesting and informative and inspires you to delve into FHIR and web application programming further.</p>
+<br>
+<!-- <div class="text-center">
+	<h4>Please fill out the Tutorial Completion survey via the link below:</h4>
+	<h3><a href="https://goo.gl/forms/y6eINpXNs2CaIqHJ3" target="_blank">Complete Post-Tutorial Survey</a></h3>
+</div> -->
+<br>
+<br>
+
+{{/markdown}}
+		<div class="row" style="padding:10px 0px 10px 0px">
+			<div class="col-md-6">
+				<div class="text-center">
+					<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="text-center">
+					<a href="#"><button id="fwd" class="btn btn-lg btn-primary">Forward</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

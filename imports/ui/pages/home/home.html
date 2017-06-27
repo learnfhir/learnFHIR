@@ -1,0 +1,29 @@
+<template name="home">
+	<div class="container">
+		<div class="col-md-9">
+			{{> Template.dynamic template=splashPage}}
+		</div>
+		<div class="col-md-3">
+			<div class="row">
+				<div class="text-center">
+					{{> shareit socialMedia}}
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<h4>Links</h4>
+				<ul>
+					<li><a href="http://hl7.org/fhir" target="_blank">HL7 FHIR</a></li>
+					<li><a href="http://smarthealthit.org" target="_blank">SMART on FHIR</a></li>
+					<li><a href="https://healthservices.atlassian.net/wiki/" target="_blank">Health Sevices Platform Consortium</a></li>
+				</ul>
+			</div>
+			<hr>
+			<div class="row">
+<!--			<a href="https://twitter.com/intent/tweet?button_hashtag=LearnFHIR" class="twitter-hashtag-button" data-show-count="false">Tweet #LoveTwitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+				<h4>Tweets about #FHIR</h4>
+				{{> tweetlist}}
+			</div>
+		</div>
+	</div>
+</template>

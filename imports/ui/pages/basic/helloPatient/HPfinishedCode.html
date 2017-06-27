@@ -1,0 +1,74 @@
+<template name="HPfinishedCode">
+	<div>
+{{#markdown}}
+The HelloPatient.html file in its entirety:
+
+```javascript
+<head>
+	<title>Hello Patient</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<head>
+
+<body>
+<ul id="htmlList">Patient List<hr></ul>
+
+<hr>
+
+<h3>Patient Information</h3>
+<p id="patientInfo"></p>
+
+</body>
+
+<script>
+
+	let patientList = {}
+
+	function patientListDisplay(data) {
+		for (patient in patientList.entry) {
+			let firstName = patientList.entry[patient].resource.name[0].given
+			let lastName = patientList.entry[patient].resource.name[0].family
+			$("#htmlList").append("<li style='cursor: pointer' id="
+				+ patient + " class='patientLink'><a href='#'>" + firstName + " " + lastName + "</a></li>")
+		}
+		$('.patientLink').on('click', function(selectedPatient) {
+			patientDataDisplay(selectedPatient.currentTarget.id)
+		})
+	}
+
+	function patientDataDisplay(selectedPatient) {
+		let patientInfo = patientList.entry[selectedPatient].resource.text.div
+		$('#patientInfo').html(patientInfo)
+	}
+
+	var FHIRquery = new XMLHttpRequest()
+
+	FHIRquery.open('GET', "https://api.hackathon.siim.org/fhir/Patient?name=SIIM", true)
+
+	FHIRquery.onload = function() {
+	    console.log(JSON.parse(FHIRquery.responseText))
+	    patientList = JSON.parse(FHIRquery.response)
+	    patientListDisplay()
+	}
+
+	FHIRquery.setRequestHeader("apikey", "HackathonOrientationSession")
+	FHIRquery.setRequestHeader("Accept", "application/json")
+	FHIRquery.send()
+</script>
+```
+
+{{/markdown}}
+		<div class="row" style="padding:10px 0px 10px 0px">
+			<div class="col-md-6">
+				<div class="text-center">
+					<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+				</div>
+			</div>
+			<div class="col-md-6">
+<!-- 				<div class="text-center">
+					<a href="#"><button id="fwd" class="btn btn-lg btn-primary">Forward</button></a>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</template>

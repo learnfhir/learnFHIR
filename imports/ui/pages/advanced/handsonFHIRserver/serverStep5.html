@@ -1,0 +1,67 @@
+<template name="serverStep5">
+	<div>
+		<h2 class="text-center">Step 5: Putting Data in Your Server</h2>
+		<hr>
+		<p>AidBox also provides a variety of premade FHIR interactions including reading and writing information from the server. Lets use one of these pre-made calls first just to see what the interaction looks like.</p>
+		<br>
+		<p>Scroll down the options along the right side of the REST Console dashboard until you find the one called "Create Patient Adam". Notice that the REST call has changed from <code>GET</code> to <code>POST</code>. A <code>POST</code> call will create new information in the database.</p>
+		<br>
+		<p>The URL is pointed at the "Patient" resources <code>http://[server]/fhir/Patient</code>. The JSON data object shown direclty below the URL is the Patient object that will be added to the database.</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/easycreate.png" width="90%">
+		</div>
+		<br>
+		<p>Click the "Execute" button and you should see the following:</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/easycreateresponse.png" width="90%">
+		</div>
+		<br>
+		<p>The Response body will echo the same Patient data object that was just added to the FHIR database. You can explore the data object itself by clicking on the individual data items and drilling into the object substructure. You can also change the display method from "Pretty" to "Raw" and look at the full JSON of the patient resource:</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/easycreateresponseraw.png" width="90%">
+		</div>
+		<br>
+		<p>Now create a new FHIR request by selecting <code>GET</code>, typing <code>/fhir/Patient</code> into the URL, and clicking execute. This creates a FHIR query for all the patients in the database. Once you execute the query you should see the following response:</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/getpatient.png" width="90%">
+		</div>
+		<br>
+		<p>Notice that the bundle now contains 1 entry. If you drill down into the <code>entry</code> section of the reponse you will see the patient information for "Adam", the simulated patient that you added to the database in the previous step.</p>
+		<br>
+		<p>Let's do this again, but instead of using the pre-formatted AidBox example well make our own Patient resource. This time, change the REST function to <code>POST</code> and enter <code>/fhir/Patient</code> at the URL.</p>
+		<br>
+		<p>In the data console below the URL copy and paste the text below:</p>
+		<pre>
+{
+	"birthdate" : "1981-09-21",
+	"resourceType" : "Patient",
+	"active" : true,
+	"gender" : "male"
+}
+		</pre>
+		<p>You can change the birthdate and gender of the data object, but don't change the resource type or active value, otherwise the FHIR call will not work as expected.</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/simplepatient.png" width="90%">
+		</div>
+		<br>
+		<p>Once you click <code>Execute</code> you should see the following, where the <code>Response</code> body echoes the data structure that you created. Notice that in addition to the data fields that you created additional fields for <code>id</code> and <code>meta</code> data were added automatically. This is expected. The <code>ID</code> value is unique to the database, and provides a way to reference the FHIR resource directly.</p> 
+		<div class="row text-center">
+			<img src="/FHIRserver/simplepatient2.png" width="90%">
+		</div>
+		<br>
+		<p>Finally, if you perform a <code>GET</code> call on the URL <code>/fhir/Patient</code> and execute you will see the following:</p>
+		<div class="row text-center">
+			<img src="/FHIRserver/getpatient2.png" width="90%">
+		</div>
+		<br>
+		<p>Notice that the returned <code>bundle</code> now contains two data objects - the sample patient created with the help of the AidBox example FHIR calls listed on the right hand side of the screen as well as the basic patient resource that you created above. Using the "pretty" display of the response body you can drill down into the data and confirm the contents for yourself.</p>
+		<br>
+		<h3 class="text-center">Congratulations! You have completed the FHIR server tutorial!</h3>
+	</div>
+	<hr>
+	<div class="row" style="padding:10px 0px 10px 0px">
+		<div class="text-center">
+			<a href="#"><button id="bck" class="btn btn-lg btn-primary">Back</button></a>
+		</div>
+	</div>
+</template>
