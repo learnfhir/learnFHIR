@@ -13,9 +13,7 @@ import '../../ui/pages/basic/handson/basichandson.js'
 import '../../ui/pages/basic/lesson1/basiclesson1.js'
 import '../../ui/pages/basic/lesson2/basiclesson2.js'
 import '../../ui/pages/basic/helloPatient/helloPatient.js'
-import '../../ui/pages/advanced/handson/advancedhandson.js'
-import '../../ui/pages/advanced/lesson1/advancedlesson1.js'
-import '../../ui/pages/advanced/lesson2/advancedlesson2.js'
+import '../../ui/pages/advanced/MeteorTutorial/MeteorTutorial.js'
 import '../../ui/pages/advanced/handsonFHIRserver/handsonFHIRserver.js'
 import '../../ui/pages/references/references.js'
 
@@ -95,22 +93,12 @@ FlowRouter.route('/helloPatient', {
   }
 })
 
-FlowRouter.route('/advancedlesson1', {
-  name : 'advancedlesson1',
+FlowRouter.route('/MeteorTutorial', {
+  name : 'MeteorTutorial',
   action() {
     BlazeLayout.render('master', {
       nav : 'navbar',
-      main : 'advancedlesson1'
-    })
-  }
-})
-
-FlowRouter.route('/advancedlesson2', {
-  name : 'advancedlesson2',
-  action() {
-    BlazeLayout.render('master', {
-      nav : 'navbar',
-      main : 'advancedlesson2'
+      main : 'MeteorTutorial'
     })
   }
 })
