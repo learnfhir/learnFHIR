@@ -4,6 +4,46 @@
 		<hr>
 	</div>
 	<hr>
+{{#markdown}}
+
+```html
+<div class="container">
+	<h1 class="text-center">Patient Task Manager</h1>
+	<hr>
+	<!-- Next code piece will go here -->
+</div>
+```
+```html
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6 center-block clearfix">
+		<form class="input-group">
+			<input class="form-control" type="text" id="patientName" 
+				placeholder="Patient Last Name" autocomplete="off" />
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="submit" 
+					id="patientSearch">Search for Patient</button>
+			</span>
+		</form>
+	</div>
+</div>
+<!-- Next code piece will go here -->
+```
+
+<pre>
+&#8826;br>
+&#8826;ul class="list-group">
+&#123;{#if patientSearchResults}}
+	&#123;{#each patientSearchResults}}
+		&#8826;li class="list-group-item">&#123;{patientFirstName}} &#123;{patientLastName}} 
+			&#8826;span class="btn badge" id="addPatient" name="{{patientId}}">Add Patient&#8826;/span>
+		&#8826;/li>
+  	&#123;{/each}}
+&#123;{/if}}
+&#8826;/ul>
+</pre>
+
+{{/markdown}}
 	<div class="row" style="padding:10px 0px 10px 0px">
 		<div class="col-md-6">
 			<div class="text-center">

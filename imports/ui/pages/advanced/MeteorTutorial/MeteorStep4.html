@@ -3,6 +3,36 @@
 		<h2 class="text-center">Step 4: </h2>
 		<hr>
 	</div>
+{{#markdown}}
+
+main.js - Client
+```js
+import { Patients } from '../import/Patients.js'
+```
+
+Patients.js - Imports
+```js
+import { Mongo } from 'meteor/mongo'
+
+export const Patients = new Mongo.Collection('patients')
+
+if (Meteor.isClient) {
+    Meteor.subscribe('patients')
+}
+
+if (Meteor.isServer) {
+    Meteor.publish('patients', function PatientsPublication() {
+        return Patients.find({})
+    })
+}
+```
+
+main.js - Server
+```js
+import { Patients } from '../import/Patients.js'
+```
+
+{{/markdown}}
 	<hr>
 	<div class="row" style="padding:10px 0px 10px 0px">
 		<div class="col-md-6">

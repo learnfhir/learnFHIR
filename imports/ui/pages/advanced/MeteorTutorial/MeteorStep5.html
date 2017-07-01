@@ -3,6 +3,46 @@
 		<h2 class="text-center">Step 5: </h2>
 		<hr>
 	</div>
+{{#markdown}}
+
+```js
+Template.body.events({
+	'click #patientSearch' : function(event) {
+		event.preventDefault()
+
+		let name = $('#patientName').val()
+		Meteor.call('FHIRpatientSearch', name, function(err, res) {
+				Session.set('patientSearchList', res.entry)
+		})
+	},
+	'click #addPatient' : function(event) {
+		event.preventDefault()
+        Meteor.call('AddPatient',this)
+	},
+})
+```
+
+```js
+Template.body.helpers({
+	patientSearchResults : function () {
+		return Session.get('patientSearchList')
+	},
+	patientFirstName : function () {
+		return this.resource.name[0].given[0]
+	},
+	patientLastName : function () {
+		return this.resource.name[0].family[0]
+	},
+})
+```
+
+```js
+Template.body.onCreated(function () {
+	Session.set('patientSearchList', [])
+})
+```
+
+{{/markdown}}
 	<hr>
 	<div class="row" style="padding:10px 0px 10px 0px">
 		<div class="col-md-6">
