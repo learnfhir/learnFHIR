@@ -8,10 +8,31 @@ Meteor makes it easy to add other open-source packages and components to the fra
 
 Packages:
 
-meteor add http
-meteor add session
-meteor add twbs:bootstrap
+The first package that we will add is called `HTTP`. This package allows you to send HTTP calls to a remote server. Since the basis for FHIR is as a REST API over HTTP supporting the standard CRUD operations (C-create, R-read, U-update, D-delete) the HTTP package is perfect for our purposes.
 
+At the command line, execute the following:
+
+```
+meteor add http
+```
+
+The second package to add is called `Session`. This package adds teh use of "Session" variables within a client web broswer. When a user navigates to the app webpage, the application can create unique Session variables which exist for that particular user as long as the webpage is open in the browser. Once the window is closed the Session variables are destroyed. The particularly useful thing about Session variables in the Meteor framework is that when the value of the variable changes, it forces elements within the webpage to change as well. We will use these variables to identify when a suer has made a selection and update the webpage to reflect that choice.
+
+Again, at the command line, execute the following:
+
+```
+meteor add session
+```
+
+The final package to add is `Bootstrap`. Bootstrap is a library of HTML-, CSS-, and JavaScript- based design templates for the web front-end. Bootstrap makes it easy to quickly build visually appealing websites. There are a variety of similar libraries out there such as Zurb Foundation and Semanti UI, but Bootstrap is easy and widely accepted, so we will enploy it to make our webpage a little prettier. 
+
+Finally, at the command line, execute the following:
+
+```
+meteor add twbs:bootstrap
+```
+
+Proceed to Step 3...
 
 {{/markdown}}
 	<hr>
