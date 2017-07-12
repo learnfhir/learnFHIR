@@ -1,46 +1,76 @@
 <template name="MeteorStep5">
 	<div>
-		<h2 class="text-center">Step 5: </h2>
+		<h2 class="text-center">Step 5: Adding a Patient Collection</h2>
 		<hr>
 	</div>
 {{#markdown}}
 
-```js
-Template.body.events({
-	'click #patientSearch' : function(event) {
-		event.preventDefault()
+The next functionality we want to add to the application is the ability to create a custom patient follow-up list. We will use one of the fundmental parts of Meteor to do this - a MongoDB database. MongoDB falls under the NoSQL class of databases. Individual records within a MongoDB are referred to as "Documents" and a set of documents together is called a "collection". Let's build a collection of patients by retrieving their information for the FHIR server and creating a "Patients" collection where each document represents a separate patient.
 
-		let name = $('#patientName').val()
-		Meteor.call('FHIRpatientSearch', name, function(err, res) {
-				Session.set('patientSearchList', res.entry)
-		})
-	},
+To create a new collection we will make a new file in the <code>/imports</code> sub-directory of our project. Imports are pieces of code that can be referenced by both the client or server. Create a file called <code>Patients.js</code> and save it in the <code>imports</code> directory. Copy and paste the following code snippit into the file:
+
+<h5><b>Step 5.1 Code</b></h5>
+```js
+import { Mongo } from 'meteor/mongo'
+
+export const Patients = new Mongo.Collection('patients')
+
+if (Meteor.isClient) {
+    Meteor.subscribe('patients')
+}
+
+if (Meteor.isServer) {
+    Meteor.publish('patients', function PatientsPublication() {
+        return Patients.find({})
+    })
+}
+```
+
+Now, to load the collection on both the client and the server, we need to create a reference to the collection in the <code>main.js</code> files on both the client and server. Copy and add the following line of code at the beginning of both <code>client/main.js</code> and <code>server/main.js</code> files.
+
+<h5><b>Step 5.2 Code</b></h5>
+```js
+import { Patients } from '../imports/Patients.js'
+```
+
+Finally, we need a way to add patients to this collection. In Step 4 our patient list had a button to "Add Patient". Let's add an "event" function that will react when a user presses this button and adds the selected patient to our "Patients" collection. Open you <code>client/main.js</code> file and add the following code snippit to the <code>Template.body.events({</code> section so it looks like this:
+
+<h5><b>Step 5.3 Code</b></h5>
+```js
 	'click #addPatient' : function(event) {
 		event.preventDefault()
-        Meteor.call('AddPatient',this)
+        Meteor.call('addPatient', this)
 	},
-})
 ```
 
+<h5><b>Step 5.4 Code</b></h5>
 ```js
-Template.body.helpers({
-	patientSearchResults : function () {
-		return Session.get('patientSearchList')
-	},
-	patientFirstName : function () {
-		return this.resource.name[0].given[0]
-	},
-	patientLastName : function () {
-		return this.resource.name[0].family[0]
-	},
-})
+    addPatient : function (patient) {
+
+    	Patients.upsert({ _id : patient._id }, patient)
+    	return
+    },
 ```
 
-```js
-Template.body.onCreated(function () {
-	Session.set('patientSearchList', [])
-})
-```
+How do we know if the patient was actually added to the collection? Well, one way to confirm is to look at the MongoDB database directly. Meteor makes this easy to do from the command line. Open a new terminal window and type:
+
+<code>meteor mongo</code>
+
+You should see something like this:
+
+<img src="./MeteorTutorial/meteormongo.png" style="height:600px">
+
+At the Mongo prompt type:
+
+<code>db.Patient.find({})</code>
+
+This command will "find" all the patients in your database. If you have successfully added patient "Hanson" to your Patients collection then you should see something like the following:
+
+<img src='./MeteorTutorial/mongoquery.png' style="height:500px">
+
+Now that we can add patients of interest to a collection, let's add the necessary components to display and manage the patient follow-up list on our webpage.
+
+Proceed to Step 6...
 
 {{/markdown}}
 	<hr>

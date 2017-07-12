@@ -10,6 +10,7 @@ import './MeteorStep5.html'
 import './MeteorStep6.html'
 import './MeteorStep7.html'
 import './MeteorStep8.html'
+import './MeteorStep9.html'
 
 Template.MeteorTutorial.onCreated(function () {
 	Session.set('MeteorStep', 'MeteorIntro')
@@ -42,6 +43,7 @@ Template.MeteorTutorial.events({
 			case 'MeteorStep5' : Session.set('MeteorStep', 'MeteorStep6'); break
 			case 'MeteorStep6' : Session.set('MeteorStep', 'MeteorStep7'); break
 			case 'MeteorStep7' : Session.set('MeteorStep', 'MeteorStep8'); break
+			case 'MeteorStep8' : Session.set('MeteorStep', 'MeteorStep9'); break
 		}
 	},
 	'click #bck': function(event) {
@@ -56,6 +58,7 @@ Template.MeteorTutorial.events({
 			case 'MeteorStep6' : Session.set('MeteorStep', 'MeteorStep5'); break
 			case 'MeteorStep7' : Session.set('MeteorStep', 'MeteorStep6'); break
 			case 'MeteorStep8' : Session.set('MeteorStep', 'MeteorStep7'); break
+			case 'MeteorStep9' : Session.set('MeteorStep', 'MeteorStep8'); break
 		}
 	}
 })

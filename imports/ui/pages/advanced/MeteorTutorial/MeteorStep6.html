@@ -1,8 +1,80 @@
 <template name="MeteorStep6">
 	<div>
-		<h2 class="text-center">Step 6: </h2>
+		<h2 class="text-center">Step 6: Displaying the Patient List</h2>
 		<hr>
 	</div>
+{{#markdown}}
+
+Now that we have a patient collection in our database that we can use for follow-up, let's work on displaying that collection in the webpage. We will add a new section to the HTML that will show the patient list. Add the following code to the HTML file in the designated location:
+
+<h5><b>Step 6.1 Code</b></h5>
+```html
+<hr>
+<div class="col-md-6">
+    <h2>Patient List</h2>
+    <div class="list-group">
+        {{|#each patients}}
+        <button class="list-group-item chosenPatient">
+            {{|#each resource.name}}
+            {{|family}}, {{|given}}
+            {{|/each}}
+            <span class="btn badge" id="removePatient" name="{{|resource.id}}">Remove Patient</span>
+        </button>
+        {{|/each}}
+    </div>
+</div>
+```
+
+If you save the <code>client/main.html</code> file and refresh the website you should now see something like this:
+
+<img src="./MeteorTutorial/patientlist1.png" style="height:400px">
+
+But you will notice that beyond the "Patient List" title, we are not seeing any selected patients. We should be seeing patient "Hanson" since we added that patient to the follow-up list in the previous step, and confirmed the addition of the data to the database. This is because we need to define a new "helper" in the JavaScript code that will display the database list on the webpage. To do this, copy the following code into the appropriate location:
+
+
+<h5><b>Step 6.2 Code</b></h5>
+```js
+    patients : function () {
+        return Patients.find({})
+    },
+```
+
+Now, when you save the <code>client/main.js</code> file and refresh the webpage you should see something like this:
+
+<img src="./MeteorTutorial/patientlist2.png" style="height:400px">
+
+The patient follow-up list is now populated below the patient search box. Fantastic!
+
+The is one additional button that we would like to make functional. You will see that the follow-up patient list members each has a button to remove the patient from the list. To make this button functional we need to add two components - an event listener which tells the website what to do when a user clicks the "Remove" patient button, and a function which removes that particular patient from the database.
+
+First, let's add the button click event listener. Add the following code to the <code>client/main.js</code> file.
+
+<h5><b>Step 6.3 Code</b></h5>
+```js
+    'click #removePatient' : function (event) {
+        event.preventDefault()
+        Meteor.call('removePatient', this)
+    },
+```
+
+Next, add the following code to the <code>server/main.js</code> file. This code snippit will match any database record with the matching patient Id. In this implementation, each patient has a unique Id value.
+
+<h5><b>Step 6.4 Code</b></h5>
+```js
+    removePatient : function (patient) {
+    	
+    	Patients.remove({ _id : patient._id })
+    	return
+    },
+```
+
+Once both of these pieces of code have been added, you should be able to search for a patient, add them to the follow-up list, and delete them from the follow-up list. In the picture below, the patient by the last name "Hanson" has been removed from the follow-up list and a patient by the last name of Morrison has been added instead.
+
+<img src="./MeteorTutorial/patientlist3.png" style="height:400px">
+
+To create a "To-Do" list for each follow-up patient, proceed to Step 7...
+
+{{/markdown}}
 	<hr>
 	<div class="row" style="padding:10px 0px 10px 0px">
 		<div class="col-md-6">
