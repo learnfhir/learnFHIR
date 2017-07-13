@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\imports",
+    "\\imports\\api",
+    "\\imports\\ui",
+    "\\imports\\ui\\pages",
+    "\\imports\\ui\\pages\\advanced",
+    "\\imports\\ui\\pages\\advanced\\handsonFHIRserver",
+    "\\imports\\ui\\pages\\advanced\\MeteorTutorial",
+    "\\public"
+  ],
+  "SelectedNode": "\\imports\\ui\\pages\\advanced\\MeteorTutorial\\MeteorStep5.html",
+  "PreviewInSolutionExplorer": false
+}
