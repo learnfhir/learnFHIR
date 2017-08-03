@@ -5,7 +5,7 @@
 	</div>
 {{#markdown}}
 
-The first order of business is to create the ability to add a CarePlan task for a given patient. Since we are using patients from our AidBox.io FHIR server, no CarePlan tasks exist yet. The first section of code that we will add will create an input box and buttong similar to the patient search box. When a patient enters a new task we will turn that task into a FHIR CarePlan resource and send it to the FHIR server. Copy the following HTML into you <code>client/main.html</code> file in the appropriate spot:
+The first order of business is to create the ability to add a CarePlan task for a given patient. Since we are using patients from our AidBox.io FHIR server, no CarePlan tasks exist yet. The first section of code that we will add will create an input box and button similar to the patient search box. When a patient enters a new task we will turn that task into a FHIR CarePlan resource and send it to the FHIR server. Copy the following HTML into you <code>client/main.html</code> file in the appropriate spot:
 
 <h5><b>Step 7.1 Code</b></h5>
 ```html
@@ -80,7 +80,7 @@ Now when a user types a task and selects "Add Task" the website will send that t
 
 If we type "Get Chest X-ray" into the input box and click "Add Task" nothing will happen, at least not that we can see. This is because we haven't added the code yet to display the list (Step 8). But the information should have made its way to the FHIR server. If we query the FHIR server directly, we should be able to find our CarePlan task.
 
-Open a new browser window and type <code>learnFHIR.aidbox.io/FHIR/CarePlan</code> into the address bar. This will query the FHIR server for all CarePlan resources. You should get a response that looks like this:
+Open a new browser window and type <code>learnFHIR.aidbox.io/fhir/CarePlan</code> (case sensitive) into the address bar. This will query the FHIR server for all CarePlan resources. You should get a response that looks like this:
 
 <img src="./MeteorTutorial/careplanfhirquery.png" style="height:400px">
 
