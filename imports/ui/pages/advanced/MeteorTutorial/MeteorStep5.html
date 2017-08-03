@@ -51,8 +51,9 @@ Now, create the addPatient function in the `server/main.js` file with the rest o
     	return
     },
 ```
-
-How do we know if the patient was actually added to the collection? Well, one way to confirm is to look at the MongoDB database directly. Meteor makes this easy to do from the command line. Open a new terminal window and type:
+This will add the patient to the database when you click the Add Patient button. Go ahead and try it in your browser.
+    
+As you will see, this will appear to do nothing since we aren't yet doing anything with the data. So, how do we know if the patient was actually added to the collection? Well, one way to confirm is to look at the MongoDB database directly. Meteor makes this easy to do from the command line. Open a new terminal window in the main directory and type:
 
 <code>meteor mongo</code>
 
