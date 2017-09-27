@@ -61,7 +61,7 @@ With Meteor still running from the command line, you should be able to simply re
 
 <img class="center-block" src="/MeteorTutorial/patientsearchbox.png" style="width:600px"/>
 
-You can type in a name and press enter in the box (or press the search button). At this point the visual elements of the search are present, but entering a name and clicking the search button doens't do anything. To make these pieces work, we need to add some JavaScipt code to the <code>client/main.js</code> file. Find and open that file in your project <code>patient-todo/</code> directory, and delete the Meteor starter code so our blank JavaScript slate only contains 2 lines of code and looks like this:
+You can type in a name and press enter in the box (or press the search button). At this point the visual elements of the search are present, but entering a name and clicking the search button doesn't do anything. To make these pieces work, we need to add some JavaScipt code to the <code>client/main.js</code> file. Find and open that file in your project <code>patient-todo/</code> directory, and delete the Meteor starter code so our blank JavaScript slate only contains 2 lines of code and looks like this:
 
 <h5><b>Step 3.3 JavaScript Code</b></h5>
 ```js
@@ -90,6 +90,7 @@ Template.body.events({
 	//Insert Step 7.2 Code Here
 	//Insert Step 7.4 Code Here
 })
+//Insert Step 4.1 Code Here
 ```
 
 This code tells the webpage to listen for a click on the HTML element with an <code>id</code> of <code>patientSearch</code>. If you look back at the HTML we added above, you will see that the button we created has that <code>id</code>. So everytime the "Search" button is clicked the webpage will execute the code within this <code>'click #patientSearch'</code> function. The function itself retrieves the text that we entered into the <code>input</code> box and sends that information to our web app server in order to make a call via FHIR.
