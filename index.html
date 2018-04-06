@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>Learn FHIR</title>
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+    <!-- navigation bar -->
+
+    <div class="container">
+        <nav class="navbar navbar-custom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">LearnFHIR</span>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="pages/introduction/introduction.html">Introduction</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Basics<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/basic/lesson1/basiclesson1.html">Lesson 1: FHIR Resources</a></li>
+                            <!-- <li><a href="/basiclesson2">Lesson 2: Making FHIR Requests</a></li> -->
+                            <li role="separator" class="divider"></li>
+                            <li><a href="pages/basic/handson/basichandson.html">Hands On: FHIR Request</a></li>
+                            <li><a href="pages/helloPatient">Hands On: Hello Patient</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/handsonFHIRServer">Creating a FHIR Server</a></li>
+                            <li><a href="pages/MeteorTutorial">FHIR App Tutorial</a></li>
+                        </ul>
+                    </li>
+                    <!--                <li class="dropdown">
+                                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">App Development<span class="caret"></span></a>
+                                       <ul class="dropdown-menu">
+                                           <li><a href="#">Getting Started</a></li>
+                                           <li><a href="#">Sandboxes</a></li>
+                                           <li><a href="#">Authentication</a></li>
+                                           <li role="separator" class="divider"></li>
+                                           <li><a href="#">Framework</a></li>
+                                       </ul>
+                                   </li> -->
+                    <li><a href="http://github.com/learnfhir" target="_blank">GitHub</a></li>
+                    <li><a href="pages/references">References</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- main body content-->
+
+    <div class="container">
+        <div class="col-md-9">
+
+            <!-- main column -->
+            <h1 class="text-center">Welcome to Learn FHIR</h1>
+
+            <p>This website is dedicated to teaching you about Fast Healthcare Interoperability Resources (FHIR) from a basic description of what FHIR is to building your first FHIR web application. Use the menubar and tabs above to navigate through the basic and advanced lessons. Hopefully you will find the website useful and informative. Feedback is always appreciated.</p>
+
+            <hr>
+            <h2 class="text-center">OHSU Department of Medical Informatics and Clinical Epidemiology</h2>
+            <div class="text-center">
+                <img src="public/PortlandPano.jpg" width="80%">
+            </div>
+            <br><br>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>What's New:</h2>
+                    <ul>
+                        <li><a href="pages/handsonFHIRserver">Setting up your own FHIR server with AidBox.io</a></li>
+                        <li><a href="pages/helloPatient">Hello Patient Tutorial</a></li>
+                        <li><a href="http://github.com/learnfhir" target="_blank">New Public GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2>Coming Soon:</h2>
+                    <ul>
+                        <li>Advanced Tutorial - Creating a Client/Server FHIR application using Meteor</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+
+            <h3>How to use this website?</h3>
+            <p>
+                This website is intended to give users a basic understanding of what FHIR is and how it works. With that foundation, users will then be able to experiment with building a FHIR query and a basic web based FHIR application, "Hello Patient!". Advanced lessons will dive deeper into web application development with FHIR, including SMART on FHIR security with OAuth2, and leave users with a boilerplate template to begin experimenting on their own.
+            </p>
+        </div>
+
+        <div class="col-md-3">
+
+            <!-- right small column -->
+
+            <img src="public/MICE-4C-POS.png" style="width:100%" />
+            <hr>
+            <h4>Links</h4>
+            <ul>
+                <li><a href="http://hl7.org/fhir" target="_blank">HL7 FHIR</a></li>
+                <li><a href="http://smarthealthit.org" target="_blank">SMART on FHIR</a></li>
+                <li><a href="https://healthservices.atlassian.net/wiki/" target="_blank">Health Sevices Platform Consortium</a></li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="container">
+        <hr>
+        <div class="col-md-6">
+            <p class="text-center">FHIR® is the registered trademark of <a href="http://hl7.org/fhir" target="_blank">HL7</a>.</p>
+        </div>
+        <div class="col-md-6">
+            This website was created by Jim Morrison, MD (2017) and is maintained and updated by the Clinical Informatics fellowship at OHSU.
+        </div>
+        <hr>
+        <br><br><br>
+    </div>
+</body>
+
+</html>

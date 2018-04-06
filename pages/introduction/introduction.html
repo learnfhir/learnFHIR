@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <title>Learn FHIR- Intorduction</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../index.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- basic header -->
+
+    <div class="container">
+        <nav class="navbar navbar-custom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">LearnFHIR - Introduction</span>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="http://github.com/learnfhir" target="_blank">GitHub</a></li>
+                    <li><a href="../pages/references/references.html">References</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- main content -->
+
+    <div class="container">
+        <h3>What is FHIR?</h3>
+
+        Fast Healthcare Interoperability Resources (FHIR) is a next generation data and messaging standard created by Health Level 7 (HL7). FHIR combines some of the best features of current medical information and messaging standards such as HL7 version 2, HL7 version 3 RIM, and CDA with a Representational State Transfer (REST) architecture to simplify the structure and trasmission of medical data. In other words, FHIR uses the best of established web architecture and protocols to lower the barriers for use and exchange of medical data.
+
+        <div class="text-center">
+            <img src="../../public/FHIRcommunication/Slide1.jpg" height="300px" align="center" />
+        </div>
+
+        The FHIR specification defines the structure of how data is represented and transmitted between clinical systems. FHIR resources can be used by systems both internal and external to a healthcare institution. For example, within an institution Radiology Information Systems (RIS) or Laboratory Information Systems (LIS) can use FHIR to communicate with the Electronic Health Record (EHR). Similarly, separate healthcare institutions could communicate with one another using FHIR resources.
+
+        <h4>What problems does it address?</h4>
+
+        Healthcare and medicine represent a unique ecosystem of information with problems of standardization and regulation unlike most other industries. At the most basic, a single piece of information (i.e. blood pressure) can be recorded in myriad ways, making the exchange and interpretation of data difficult without creating a map of matching data points between systems. To solve this the FHIR specification defines standardization of data representation for messages between medical systems. Furthermore, through use of RESTful architecture, FHIR simplifies the acquisition of data through web based query and response.
+
+        <h4>Introduction to FHIR</h4>
+
+        FHIR stands for <b>F</b>ast <b>H</b>ealthcare <b>I</b>nteroperability <b>R</b>esources. FHIR was created/designed from the ground up to make the transfer of healthcare information easier by leveraging existing web design philophies and technologies.
+
+        <h3>Background</h3>
+
+        <b>H</b>ealth <b>L</b>evel 7 (or HL7) is an international standards body which develops and supports healthcare data messaging and formatting standards. HL7 vesion 2 (HL7v2) has been widely adopted around the world and is used in most every clinical system or Electronic Health Record (EHR) to transmit information from one system or device to another.
+
+        HL7v2 messages were developed in the early 1990s. The structure of the message contains fields and codes which are numbered sequentially and use various characters to separate individual pieces of data within a message.
+
+        <h3>Why is FHIR an improvement?</h3>
+
+        FHIR adopts the best features of HL7 version 2, HL7 version 3, and HL7 <b>C</b>ommon <b>D</b>cument <b>A</b>rchitecture (CDA) and combines them with standard web technologies to create a messaging and information exchange standard that can be quickly and easily incorporated into new technology and software applications. The intuitive data structure of FHIR resources makes understanding, using, and manipulating health data easier than ever.
+
+        <h3>Current Status</h3>
+
+        FHIR as a standard has been evolving over time and has progressed through several phases of development. Originally proposed and implemented, FHIR became a <b>D</b>raft <b>S</b>tandard for <b>T</b>rial <b>U</b>se (DSTU) and has gone through many iterations. You will see the acronym DSTUx, where x is the version number, signifying the version implemented on a particular server. As of 2017, the most common FHIR in use is DSTU2, however the third version STU3 has been released.
+
+        <h3>Messaging Examples</h3>
+
+        <h4>HL7 vesion 2.4 Example Message</h4>
+        <pre>
+            MSH|^~\&|GHH LAB|ELAB-3|GHH OE|BLDG4|200202150930||ORU^R01|CNTRL-3456|P|2.4<cr>
+            PID|||555-44-4444||EVERYWOMAN^EVE^E^^^^L|JONES|19620320|F|||153 FERNWOOD DR.^
+            ^STATESVILLE^OH^35292||(206)3345232|(206)752-121||||AC555444444||67-A4335^OH^20030520<cr>
+            OBR|1|845439^GHH OE|1045813^GHH LAB|15545^GLUCOSE|||200202150730|||||||||
+            555-55-5555^PRIMARY^PATRICIA P^^^^MD^^|||||||||F||||||444-44-4444^HIPPOCRATES^HOWARD H^^^^MD<cr>
+            OBX|1|SN|1554-5^GLUCOSE^POST 12H CFST:MCNC:PT:SER/PLAS:QN||^182|mg/dl|70_105|H|||F<cr>
+        </pre>
+
+        <h4>HL7 version 3 Example Message</h4>
+
+        <textarea class="exampleCode">
+
+        <POLB_IN224200 ITSVersion="XML_1.0" xmlns="urn:hl7-org:v3"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <id root="2.16.840.1.113883.19.1122.7" extension="CNTRL-3456" />
+
+
+
+        <creationTime value="200202150930-0400" />
+
+
+
+            <!-- The version of the datatypes/RIM/vocabulary used is that of May 2006 -->
+        <versionCode code="2006-05" />
+
+
+
+            <!-- interaction id= Observation Event Complete, w/o Receiver Responsibilities -->
+        <interactionId root="2.16.840.1.113883.1.6" extension="POLB_IN224200" />
+
+
+
+        <processingCode code="P" />
+
+
+
+        <processingModeCode nullFlavor="OTH" />
+
+
+
+        <acceptAckCode code="ER" />
+
+
+
+        <receiver typeCode="RCV">
+        <device classCode="DEV" determinerCode="INSTANCE">
+        <id extension="GHH LAB" root="2.16.840.1.113883.19.1122.1" />
+
+
+
+        <asLocatedEntity classCode="LOCE">
+        <location classCode="PLC" determinerCode="INSTANCE">
+        <id root="2.16.840.1.113883.19.1122.2" extension="ELAB-3" />
+
+
+
+                        </location>
+                    </asLocatedEntity>
+                </device>
+            </receiver>
+        <sender typeCode="SND">
+        <device classCode="DEV" determinerCode="INSTANCE">
+        <id root="2.16.840.1.113883.19.1122.1" extension="GHH OE" />
+
+
+
+        <asLocatedEntity classCode="LOCE">
+        <location classCode="PLC" determinerCode="INSTANCE">
+        <id root="2.16.840.1.113883.19.1122.2" extension="BLDG24" />
+
+
+
+                        </location>
+                    </asLocatedEntity>
+                </device>
+            </sender>
+        <controlActProcess classCode="CACT" moodCode="EVN">
+        <code code="POLB_TE224200" codeSystem="2.16.840.1.113883.1.18" />
+
+
+
+        <subject typeCode="SUBJ" contextConductionInd="false">
+        <observationEvent>
+        <id root="2.16.840.1.113883.19.1122.4" extension="1045813"
+            assigningAuthorityName="GHH LAB Filler Orders" />
+
+
+
+        <code code="1554-5" codeSystemName="LN"
+              codeSystem="2.16.840.1.113883.6.1"
+              displayName="GLUCOSE^POST 12H CFST:MCNC:PT:SER/PLAS:QN" />
+
+
+
+        <statusCode code="completed" />
+
+
+
+        <effectiveTime value="200202150730" />
+
+
+
+        <priorityCode code="R" />
+
+
+
+        <confidentialityCode code="N"
+                             codeSystem="2.16.840.1.113883.5.25" />
+
+
+
+        <value xsi:type="PQ" value="182" unit="mg/dL" />
+
+
+
+        <interpretationCode code="H" />
+
+
+
+        <referenceRange>
+        <interpretationRange>
+        <value xsi:type="IVL_PQ">
+        <low value="70" unit="mg/dL" />
+
+
+
+        <high value="105" unit="mg/dL" />
+
+
+
+                                </value>
+        <interpretationCode code="N" />
+
+
+
+                            </interpretationRange>
+                        </referenceRange>
+        <author>
+        <time value="200202150730" />
+
+
+
+        <modeCode code="WRITTEN" />
+
+
+
+        <signatureCode code="S" />
+
+
+
+        <assignedEntity>
+        <id root="2.16.840.1.113883.19.1122.3" extension="444-444-4444" />
+
+
+
+        <assignedPerson>
+        <name>
+        <given>Harold</given>
+        <given>H</given>
+        <family>Hippocrates</family>
+        <suffix qualifier="AC">MD</suffix>
+                                    </name>
+                                </assignedPerson>
+                            </assignedEntity>
+                        </author>
+        <recordTarget>
+        <patientClinical>
+        <id root="2.16.840.1.113883.19.1122.5" extension="444-22-2222"
+            assigningAuthorityName="GHH Lab Patient IDs" />
+
+
+
+        <statusCode code="active" />
+
+
+
+        <patientPerson>
+        <name use="L">
+        <given>Eve</given>
+        <given>E</given>
+        <family>Everywoman</family>
+                                    </name>
+        <asOtherIDs>
+        <id extension="AC555444444" assigningAuthorityName="SSN"
+            root="2.16.840.1.113883.4.1" />
+
+
+
+                                    </asOtherIDs>
+                                </patientPerson>
+                            </patientClinical>
+                        </recordTarget>
+        <inFulfillmentOf>
+        <placerOrder>
+        <id root="2.16.840.1.113883.19.1122.14" extension="845439"
+            assigningAuthorityName="GHH OE Placer orders" />
+
+
+
+                            </placerOrder>
+                        </inFulfillmentOf>
+                    </observationEvent>
+                </subject>
+            </controlActProcess>
+        </POLB_IN224200>
+
+            </textarea>
+        </pre>
+    </div>
+</body>
+</html>

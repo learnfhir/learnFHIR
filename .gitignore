@@ -1,4 +1,2 @@
 .vs/
-.deploy*
-startmeteor.cmd
-startmongo.cmd
+.deploy/
