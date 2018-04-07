@@ -89,51 +89,33 @@
 
         <h4>HL7 version 3 Example Message</h4>
 
-        <textarea class="exampleCode">
+        <textarea class="exampleCode" style="height:450px;">
 
         <POLB_IN224200 ITSVersion="XML_1.0" xmlns="urn:hl7-org:v3"
                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <id root="2.16.840.1.113883.19.1122.7" extension="CNTRL-3456" />
 
-
-
         <creationTime value="200202150930-0400" />
-
-
 
             <!-- The version of the datatypes/RIM/vocabulary used is that of May 2006 -->
         <versionCode code="2006-05" />
 
-
-
             <!-- interaction id= Observation Event Complete, w/o Receiver Responsibilities -->
         <interactionId root="2.16.840.1.113883.1.6" extension="POLB_IN224200" />
 
-
-
         <processingCode code="P" />
-
-
 
         <processingModeCode nullFlavor="OTH" />
 
-
-
         <acceptAckCode code="ER" />
-
-
 
         <receiver typeCode="RCV">
         <device classCode="DEV" determinerCode="INSTANCE">
         <id extension="GHH LAB" root="2.16.840.1.113883.19.1122.1" />
 
-
-
         <asLocatedEntity classCode="LOCE">
         <location classCode="PLC" determinerCode="INSTANCE">
         <id root="2.16.840.1.113883.19.1122.2" extension="ELAB-3" />
-
-
 
                         </location>
                     </asLocatedEntity>
@@ -143,13 +125,9 @@
         <device classCode="DEV" determinerCode="INSTANCE">
         <id root="2.16.840.1.113883.19.1122.1" extension="GHH OE" />
 
-
-
         <asLocatedEntity classCode="LOCE">
         <location classCode="PLC" determinerCode="INSTANCE">
         <id root="2.16.840.1.113883.19.1122.2" extension="BLDG24" />
-
-
 
                         </location>
                     </asLocatedEntity>
@@ -158,81 +136,49 @@
         <controlActProcess classCode="CACT" moodCode="EVN">
         <code code="POLB_TE224200" codeSystem="2.16.840.1.113883.1.18" />
 
-
-
         <subject typeCode="SUBJ" contextConductionInd="false">
         <observationEvent>
         <id root="2.16.840.1.113883.19.1122.4" extension="1045813"
             assigningAuthorityName="GHH LAB Filler Orders" />
 
-
-
         <code code="1554-5" codeSystemName="LN"
               codeSystem="2.16.840.1.113883.6.1"
               displayName="GLUCOSE^POST 12H CFST:MCNC:PT:SER/PLAS:QN" />
 
-
-
         <statusCode code="completed" />
-
-
 
         <effectiveTime value="200202150730" />
 
-
-
         <priorityCode code="R" />
-
-
 
         <confidentialityCode code="N"
                              codeSystem="2.16.840.1.113883.5.25" />
 
-
-
         <value xsi:type="PQ" value="182" unit="mg/dL" />
 
-
-
         <interpretationCode code="H" />
-
-
 
         <referenceRange>
         <interpretationRange>
         <value xsi:type="IVL_PQ">
         <low value="70" unit="mg/dL" />
 
-
-
         <high value="105" unit="mg/dL" />
-
-
 
                                 </value>
         <interpretationCode code="N" />
-
-
 
                             </interpretationRange>
                         </referenceRange>
         <author>
         <time value="200202150730" />
 
-
-
         <modeCode code="WRITTEN" />
-
-
 
         <signatureCode code="S" />
 
-
-
         <assignedEntity>
         <id root="2.16.840.1.113883.19.1122.3" extension="444-444-4444" />
-
-
 
         <assignedPerson>
         <name>
@@ -249,11 +195,7 @@
         <id root="2.16.840.1.113883.19.1122.5" extension="444-22-2222"
             assigningAuthorityName="GHH Lab Patient IDs" />
 
-
-
         <statusCode code="active" />
-
-
 
         <patientPerson>
         <name use="L">
@@ -265,8 +207,6 @@
         <id extension="AC555444444" assigningAuthorityName="SSN"
             root="2.16.840.1.113883.4.1" />
 
-
-
                                     </asOtherIDs>
                                 </patientPerson>
                             </patientClinical>
@@ -275,8 +215,6 @@
         <placerOrder>
         <id root="2.16.840.1.113883.19.1122.14" extension="845439"
             assigningAuthorityName="GHH OE Placer orders" />
-
-
 
                             </placerOrder>
                         </inFulfillmentOf>
