@@ -6,4 +6,7 @@
   <component name="PreferredVcsStorage">
     <preferredVcsName>ApexVCS</preferredVcsName>
   </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep2.html" />
+  </component>
 </project>

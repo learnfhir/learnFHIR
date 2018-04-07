@@ -1,9 +1,9 @@
-# LearnFHIR
+# LearnFHIR - HTML/Angular Version
 
 ## Installation
 
-This webpage is built using Meteor. To clone this project and run it locally, you must first install Meteor from Meteor.com.
+This webpage was originally build using meteor. To make it more friendly to host with other pages, this branch is converted into a regular HTML structure, with embedded Angular scripts where necessary (mostly hands-on pages).
 
 ## Running
 
-Once you have installed Meteor and cloned the project, simply go to the directory `cd learnFHIR` and type `meteor`.
+This project should be ran direct with a web server such as Apache or Nginx
