@@ -2,13 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e47509-3cd4-444f-a532-dd0230823b8d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorIntro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverIntro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep5.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/basic/handson/basichandson.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/handson/basichandson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/introduction/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/introduction/introduction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/introduction/introduction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/prequiz/prequiz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/prequiz/prequiz.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/references/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/references/references.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,36 +45,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="introduction.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/introduction/introduction.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="95" column="72" selection-start-line="95" selection-start-column="72" selection-end-line="95" selection-end-column="72" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basiclesson1.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="383">
+              <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -64,14 +63,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.css" />
-        <option value="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pages/references/references.html" />
-        <option value="$PROJECT_DIR$/pages/basic/handson/basichandson.html" />
         <option value="$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep1.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep3.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" />
         <option value="$PROJECT_DIR$/pages/introduction/introduction.html" />
+        <option value="$PROJECT_DIR$/pages/references/references.html" />
         <option value="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" />
+        <option value="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" />
+        <option value="$PROJECT_DIR$/pages/basic/handson/basichandson.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" />
+        <option value="$PROJECT_DIR$/index.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -106,25 +109,6 @@
               <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
               <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="introduction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -181,7 +165,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5269000" />
+    <option name="totallyTimeSpent" value="13892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -189,6 +173,7 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32897604" />
@@ -217,127 +202,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="HelloPatient is now HTML. Minor changes to content." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/prequiz/prequiz.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPintro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="41" column="14" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="56" selection-start-line="1" selection-start-column="9" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="2" selection-start-line="2" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="418" lean-forward="true" selection-start-line="418" selection-end-line="418" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#2;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11290#11294#0" expanded="true" />
-            <element signature="e#11298#11302#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11812#11816#0" expanded="true" />
-            <element signature="e#11827#11831#0" expanded="true" />
-            <element signature="e#11831#11835#0" expanded="true" />
-            <element signature="e#11837#11841#0" expanded="true" />
-            <element signature="e#15229#15233#0" expanded="true" />
-            <element signature="e#15239#15243#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#16840#16844#0" expanded="true" />
-            <element signature="e#16848#16852#0" expanded="true" />
-            <element signature="e#16883#16887#0" expanded="true" />
-            <element signature="e#16899#16903#0" expanded="true" />
-            <element signature="e#16903#16907#0" expanded="true" />
-            <element signature="e#16909#16913#0" expanded="true" />
-            <element signature="e#16947#16951#0" expanded="true" />
-            <element signature="e#16967#16971#0" expanded="true" />
-            <element signature="e#16983#16987#0" expanded="true" />
-            <element signature="e#16989#16993#0" expanded="true" />
-            <element signature="e#16993#16997#0" expanded="true" />
-            <element signature="e#17000#17004#0" expanded="true" />
-            <element signature="e#18244#18248#1" expanded="true" />
-            <element signature="e#18252#18256#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#2;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPfinishedCode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="58" lean-forward="true" selection-start-line="2" selection-end-line="58" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPfinishedCode.html" />
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -356,21 +221,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="102" column="3" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.js" />
     <entry file="file://$PROJECT_DIR$/pages/references/references.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -378,18 +232,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/introduction/introduction.js" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/introduction/introduction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="250">
+          <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -404,13 +253,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="96" column="58" selection-start-line="96" selection-start-column="58" selection-end-line="96" selection-end-column="58" />
+        <state relative-caret-position="-800" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/home/home.js" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPintro.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep1.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.js" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep2.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep3.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep4.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPstep5.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/HPfinishedCode.html" />
+    <entry file="file://$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="102" column="3" selection-start-line="102" selection-start-column="3" selection-end-line="102" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.js" />
+    <entry file="file://$PROJECT_DIR$/pages/introduction/introduction.js" />
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverIntro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="35" column="148" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="35" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="58" column="98" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="58" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="36" column="91" lean-forward="true" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="91" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/prequiz/prequiz.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/introduction/introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/references/references.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/handson/basichandson.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="44" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#2;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#2;n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorIntro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="49" column="13" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="35" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="119" column="57" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="119" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="54" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="74" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="75" lean-forward="true" selection-start-line="6" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep7.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="86" column="60" lean-forward="true" selection-start-line="6" selection-end-line="86" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep8.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="75" column="21" lean-forward="true" selection-start-line="6" selection-end-line="75" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="762" column="302" selection-start-line="762" selection-start-column="302" selection-end-line="762" selection-end-column="302" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#2;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#8;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#46460#46464#0" expanded="true" />
+            <element signature="e#46490#46494#0" expanded="true" />
+            <element signature="e#46550#46554#0" expanded="true" />
+            <element signature="e#46552#46556#0" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#9;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep9.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="71" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
         </state>
       </provider>
     </entry>
