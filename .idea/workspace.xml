@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8e47509-3cd4-444f-a532-dd0230823b8d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorIntro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverIntro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/basic/handson/basichandson.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/handson/basichandson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/introduction/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/introduction/introduction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/prequiz/prequiz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/prequiz/prequiz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/references/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/references/references.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,11 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="MeteorTutorial.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+            <state relative-caret-position="384">
+              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#1;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#2;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#7;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#8;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#46550#46554#0" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#9;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,15 +50,15 @@
         <option value="$PROJECT_DIR$/pages/basic/lesson2/basiclesson2.html" />
         <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep1.html" />
         <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/serverStep3.html" />
-        <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" />
         <option value="$PROJECT_DIR$/pages/introduction/introduction.html" />
         <option value="$PROJECT_DIR$/pages/references/references.html" />
         <option value="$PROJECT_DIR$/pages/basic/lesson1/basiclesson1.html" />
         <option value="$PROJECT_DIR$/pages/basic/helloPatient/helloPatient.html" />
         <option value="$PROJECT_DIR$/pages/basic/handson/basichandson.html" />
-        <option value="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" />
         <option value="$PROJECT_DIR$/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html" />
+        <option value="$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html" />
       </list>
     </option>
   </component>
@@ -109,6 +93,26 @@
               <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
               <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="handsonFHIRserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="learnFHIR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="learnFHIR" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="advanced" type="462c0819:PsiDirectoryNode" />
+              <item name="MeteorTutorial" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,21 +165,45 @@
       <option name="project" value="LOCAL" />
       <updated>1523061878755</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished major HTML conversion. Small content updates.">
+      <created>1523077234488</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523077234504</updated>
+    </task>
+    <task id="LOCAL-00003" summary="HelloPatient is now HTML. Minor changes to content.">
+      <created>1523077399125</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523077399125</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13892000" />
+    <option name="totallyTimeSpent" value="14344000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -188,7 +216,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +225,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finished major HTML conversion. Small content updates." />
     <MESSAGE value="HelloPatient is now HTML. Minor changes to content." />
     <option name="LAST_COMMIT_MESSAGE" value="HelloPatient is now HTML. Minor changes to content." />
   </component>
@@ -322,21 +350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="58" column="98" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="58" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="91" lean-forward="true" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="91" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -476,28 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="762" column="302" selection-start-line="762" selection-start-column="302" selection-end-line="762" selection-end-column="302" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#1;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#2;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#8;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#46460#46464#0" expanded="true" />
-            <element signature="e#46490#46494#0" expanded="true" />
-            <element signature="e#46550#46554#0" expanded="true" />
-            <element signature="e#46552#46556#0" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#div#9;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorStep9.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -516,8 +507,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="1120">
           <caret line="84" column="24" lean-forward="true" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/handsonFHIRserver/handsonFHIRserver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#5;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/advanced/MeteorTutorial/MeteorTutorial.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#2;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#4;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#6;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#7;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#8;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#46550#46554#0" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#9;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
