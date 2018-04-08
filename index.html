@@ -3,7 +3,7 @@
     <title>Learn FHIR</title>
 
     <!-- Latest compiled and minified BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./index.css" />
 
     <!-- jQuery library for bootstrap-->
@@ -65,18 +65,24 @@
             <p>This website is dedicated to teaching you about Fast Healthcare Interoperability Resources (FHIR) from a basic description of what FHIR is to building your first FHIR web application. Use the menubar and tabs above to navigate through the basic and advanced lessons. Hopefully you will find the website useful and informative. Feedback is always appreciated.</p>
 
             <hr>
-            <h2 class="text-center">OHSU Department of Medical Informatics and Clinical Epidemiology</h2>
-            <div class="text-center">
-                <img src="public/PortlandPano.jpg" width="80%">
+            <h3>FHIR DevDays 2018</h3>
+            <div class=" text-center">
+
+                <a href="https://www.fhirdevdays.com/" target="_blank">
+                <img  alt="Boston" src="https://www.fhirdevdays.com/boston/wp-content/uploads/sites/3/2018/01/devdays-2018-boston-01.jpg" width="100%">
+                <div class="caption">
+                    <h4 class="text-white">19-21 JUNE 2018<br>BOSTON, MA</h4>
+                </div>
+                </a>
             </div>
-            <br><br>
+
             <hr>
 
             <div class="row">
                 <div class="col-md-6">
                     <h2>What's New:</h2>
                     <ul>
-                        <li><a href="pages/basic/handson/basichandson.html">Hands-on FHIR calls with updated servers</a></li>
+                        <li><a href="./pages/basic/handson/basichandson.html">Hands-on FHIR calls with updated servers</a></li>
                         <li><a href="./pages/references/references.html">Updated Resources</a></li>
                     </ul>
                 </div>
@@ -99,7 +105,9 @@
 
             <!-- right small column -->
 
-            <img src="public/MICE-4C-POS.png" style="width:100%" />
+            <a href="https://www.ohsu.edu/xd/education/schools/school-of-medicine/departments/clinical-departments/dmice/">
+                <img src="public/MICE-4C-POS.png" style="width:100%" />
+            </a>
             <hr>
             <h4>Quick Links</h4>
             <ul>
@@ -108,8 +116,6 @@
                 <li><a href="https://healthservices.atlassian.net/wiki/" target="_blank">Health Services Platform Consortium</a></li>
             </ul>
             <hr>
-            <h4> Informatics Professor</h4>
-            <p id="postTitle"></p>
         </div>
     </div>
 
@@ -117,43 +123,15 @@
 
     <div class="container">
         <hr>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
             <p class="text-center">FHIR&reg; is the registered trademark of <a href="http://hl7.org/fhir" target="_blank">HL7</a>.</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
             This website was created by Jim Morrison, MD (2017) and is maintained and updated by the Clinical Informatics fellowship at OHSU.
         </div>
         <hr>
         <br><br><br>
     </div>
 </body>
-<!-- script to pull/load blog posts - in progress
-<script>
-    let text, parse, xmlDoc;
-    let theUrl = 'https://crossorigin.me/http://informaticsprofessor.blogspot.com/feeds/posts/default?alt=rss';
-    var HttpClient = function() {
-        this.get = function(aUrl, aCallback) {
-            var anHttpRequest = new XMLHttpRequest();
-            anHttpRequest.onreadystatechange = function() {
-                if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-                    aCallback(anHttpRequest.responseText);
-            }
-
-            anHttpRequest.open( "GET", aUrl, true );
-            anHttpRequest.send( null );
-        }
-    }
-
-    var client = new HttpClient();
-    client.get(theUrl, function(response) {
-    console.log(response);
-
-    document.getElementById('postTitle').innerHTML = response.toString()//JSON.parse(xmlDoc.getElementsByTagName('description'),null,2)
-    });
-
-
-</script>
-
--->
 
 </html>
