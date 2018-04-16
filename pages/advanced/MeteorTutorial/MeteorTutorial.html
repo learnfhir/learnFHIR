@@ -1,0 +1,793 @@
+
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>Learn FHIR- Advanced Meteor tutorialn</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../index.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- basic header -->
+
+<div class="container">
+    <nav class="navbar navbar-custom">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="navbar-brand">Learn FHIR- Advanced Meteor tutorial</span>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="http://github.com/learnfhir" target="_blank">GitHub</a></li>
+                <li><a href="../../../pages/references/references.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- main content -->
+
+<!-- left nav panel -->
+
+	<div class="container">
+		<div class="col-md-3" role="navigation">
+			<div>
+				<h3>FHIR Web App Tutorial</h3>
+				<small style="padding-top:0px">Build a basic FHIR application using Meteor</small>
+			</div>
+			<hr>
+
+            <!-- Nav bar here -->
+            <ul class="nav nav-pills nav-stacked" data-tabs="tabs">
+                <li class="active"><a href="#MeteorIntro" data-toggle="tab">Introduction</a></li>
+
+                <li> <a href="#MeteorStep1" data-toggle="tab">Step 1: Creating a Meteor App</a></li>
+                <li> <a href="#MeteorStep2" data-toggle="tab">Step 2: Adding Packages</a></li>
+                <li> <a href="#MeteorStep3" data-toggle="tab">Step 3: Searching for a Patient</a></li>
+                <li> <a href="#MeteorStep4" data-toggle="tab">Step 4: Showing the Search Results</a></li>
+                <li> <a href="#MeteorStep5" data-toggle="tab">Step 5: Adding a Patient Collection</a></li>
+                <li> <a href="#MeteorStep6" data-toggle="tab">Step 6: Displaying the Patient List</a></li>
+                <li> <a href="#MeteorStep7" data-toggle="tab">Step 7: Adding a CarePlan Task</a></li>
+                <li> <a href="#MeteorStep8" data-toggle="tab">Step 8: Showing the Task List</a></li>
+                <li> <a href="#MeteorStep9" data-toggle="tab">Step 9: Completing Tasks</a></li>
+			</ul>
+		</div>
+        <div class="col-md-9 tab-content" style="font-family: Century Gothic, sans-serif;">
+
+            <!-- content here -->
+
+            <div id="MeteorIntro" class="tab-pane fade in active">
+                <div>
+                    <h2 class="text-center">Introduction</h2>
+                    <hr>
+                </div>
+                <p>
+                This tutorial will show you how to create a FHIR based web application that reads, writes, updates, and deletes FHIR resources from a remote server. The application we will build is a simple patient task manager. Essentially this is a "To-Do" list for a healthcare provider to keep track of all the tasks needed in the care of a patient.
+                </p>
+                <p>
+                The FHIR resources used in this application are:
+                </p>
+                <ul>
+                    <li>Patient</li>
+                    <li>CarePlan</li>
+                </ul>
+                <p>
+                To make creation of this web app easier we are using the open-source web framework, MeteorJS. Meteor simplifies creation of web based tools by supplying a robust premade client-server infrastructure that allows us to focus on creating, manipulating, and displaying data (the fun stuff).
+                </p>
+                <p>
+                While this tutorial is intended to be used by anyone, regardless of programming background, it may be helpful to start by doing the "To Do" tutorial on the Meteor website (link here). The Meteor tutorial does go more in depth into the capabilities of Meteor then is needed for his tutorial, but also gives a good overview of the basic concepts and components of the framework.
+                </p>
+                <p>
+                All together, this tutorial consists of 205 lines of code (including some spaces), and we will build the app piece by piece.
+                </p>
+                <h4>A note on coding style:</h4>
+                <p>
+                This app was created purposefully to be in a single HTML file. One of Meteor's strengths is its templating engine, which we are not making use of for the sake of simplicity. The goal of this tutorial is the use of FHIR, rather than using Meteor. Also, I don't use ending semi-colons - because they are not needed in JavaScript, and tabs, not spaces. :)
+                </p>
+
+            </div>
+
+            <div id="MeteorStep1" class="tab-pane fade">
+                <div>
+                    <h2 class="text-center">Step 1: Creating a Meteor App</h2>
+                    <hr>
+                </div>
+                <p>
+                To create a Meteor application you must first install Meteor on your machine. This is a pretty easy process, simply follow the instructions at the Meteor website:
+                </p>
+                <a href="https://www.meteor.com/install">Meteor Installation</a>
+                <p>
+                    Once Meteor is installed on your computer you are ready to create your first application. Open a command prompt window and type:
+                </p>
+                <p>
+                <code>
+                meteor create patient-todo
+                </code>
+                </p>
+                <p>
+                This will tell Meteor to create the basic framework and directory structure for your application. There is simple built-in webpage to test that meteor is working. At the command prompt, navigate to the directory of your application:
+                </p>
+                <p><code>cd patient-todo</code> and then simply type:<code>meteor</code>
+                </p>
+                <p>
+                Hit enter and the Meteor framework will begin to build your application. The first time you run Meteor at the command line it will take a bit to download all the necessary components and start your application. Once the process is completed you should see a message at the command prompt that looks like this:
+                </p>
+                <img src="../../../public/AppTutorial/MeteorFirstStart.JPG" />
+                <p>
+                If you then open a web browser (Google Chrome is recommended for its debugging capabilities) and type `localhost:3000` into the address bar you should see a web page like below. The `localhost` portion of the address is telling the web browser to reference the local computer (the one you are using) and the <code>:3000</code> is directing it to PORT 3000, which is the default port that Meteor applications use. If you have another program running on PORT 3000 then you may receive an error at the command line and the application will fail to load.
+                </p>
+                <p>
+                If everything went well, you should now see this in your web browser:
+                </p>
+                <img src="../../../public/AppTutorial/MeteorNewAppPlaceholder.JPG" />
+                <p>
+                You can stop the Meteor application from running at the command line by typing `CTRL-C`. The application will exit and you will be back to the command prompt. Stop the application now so that we can complete the final portion of Step 1.
+                </p>
+                <p>
+                We will add one directory to the application structure to eventually hold our database collection code. From the command line (or file explorer), make a new folder in the project dierectory called `import`. Your project directory should look something like this:
+                </p>
+                <textarea class="exampleCode" style="height: 120px;">
+                .meteor
+                client
+                main.css
+                main.html
+                main.js
+                import
+                node_modules
+                server
+                main.js
+                </textarea>
+<p>
+                Now that we have installed Meteor and created the basic framework for our application, lets add a few additional building blocks to make our job even easier. Proceed to Step 2.
+</p>
+
+            </div>
+
+            <div id="MeteorStep2" class="tab-pane fade">
+                <div>
+                    <h2 class="text-center">Step 2: Adding Packages</h2>
+                    <hr>
+                </div>
+                <p>
+                Meteor makes it easy to add other open-source packages and components to the framework to enhance and extend the basic capabilities. We will use the following packages to make communication with the FHIR server easier and the overall look of our webpage prettier.
+                </p>
+                <h4>Packages:</h4>
+                <p>
+                The first package that we will add is called `HTTP`. This package allows you to send HTTP calls to a remote server. Since the basis for FHIR is as a REST API over HTTP supporting the standard CRUD operations (C-create, R-read, U-update, D-delete) the HTTP package is perfect for our purposes.
+                </p>
+                <p>
+                At the command line, execute the following:
+                </p>
+                <p>
+                <code>meteor add http</code>
+                </p>
+                <p>
+                The second package to add is called `Session`. This package adds the use of "Session" variables within a client web broswer. When a user navigates to the app webpage, the application can create unique Session variables which exist for that particular user as long as the webpage is open in the browser. Once the window is closed the Session variables are destroyed. The particularly useful thing about Session variables in the Meteor framework is that when the value of the variable changes, it forces elements within the webpage to change as well. We will use these variables to identify when a user has made a selection and update the webpage to reflect that choice.
+                </p>
+                <p>
+                Again, at the command line, execute the following:
+                </p>
+                <p>
+                    <code>meteor add session</code>
+                </p>
+                <p>
+                The final package to add is `Bootstrap`. Bootstrap is a library of HTML-, CSS-, and JavaScript- based design templates for the web front-end. Bootstrap makes it easy to quickly build visually appealing websites. There are a variety of similar libraries out there such as Zurb Foundation and Semanti UI, but Bootstrap is easy and widely accepted, so we will enploy it to make our webpage a little prettier.
+                </p>
+                <p>
+                Finally, at the command line, execute the following:
+                </p>
+                <p>
+                    <code>meteor add twbs:bootstrap</code>
+                </p>
+                <p>
+                Proceed to Step 3...
+                </p>
+            </div>
+
+            <div id="MeteorStep3" class="tab-pane fade">
+                <div>
+                    <h2 class="text-center">Step 3: Searching for a Patient</h2>
+                    <hr>
+                </div>
+
+                <p>
+                The first functionality we will add to the application is the ability to search for a particular patient in the FHIR database. We will keep this simple, and look patients up by their last name, allowing a user to then select a patient from the search result list.
+                </p>
+                <p>
+                Let's being by adding a title and some styling to our web page. Open the <code>main.html</code> file located in the <code>patient-todo/client</code> directory. Delete the Meteor starter HTML, so that the file now looks like this:
+                </p>
+
+                <textarea class="exampleCode" style="height: 80px">
+                <head>
+                    <title>patient-todo</title>
+                </head>
+
+                <body>
+                <!-- Step 3.1 HTML code goes HERE -->
+                </body>
+               </textarea>
+                <p>
+                This will be our blank HTML slate to build upon. I have left place holder comments in the code, so you need to do is copy the tutorial code and replace the <code>&#8826;!-- Step x HTML code goes HERE --></code> markers at each step. Add the following HTML into the <code>body</code> section of the <code>client/main.html</code> file.
+                </p>
+                <h5><b>Step 3.1 HTML Code</b></h5>
+               <textarea class="exampleCode" style="height: 80px">
+                <div class="container">
+                    <h1 class="text-center">Patient Task Manager</h1>
+                    <hr>
+                    <!-- Step 3.2 HTML code goes HERE -->
+
+                    <!-- Step 4.2 HTML code goes HERE -->
+                    <!-- Step 6.1 HTML code goes HERE -->
+                    <!-- Step 7.1 HTML code goes HERE -->
+                </div>
+                </textarea>
+                <p>
+                If you run Meteor from the command line in the project directory (<code>/patient-todo/meteor</code>) and then open a web browser window to <code>localhost:3000</code> then you should see the following:
+                </p>
+                <img class="center-block" src="../../../public/MeteorTutorial/pageTitle.png" style="width:600px"/>
+                <p>
+                Next let's add the search input box and button to initite the patient search. Much of the following code, particularly the <code>class=""</code> delcarations, are components of Bootstrap used to make the page look pretty. Don't feel overwhelmed if you don't quite understand all the details of what we are doing in the HTML. The important points here are the <code>input</code> and <code>button</code> elements. This code snippit should also be added to the <code>client/main.html</code> file, just below the code we added above.
+                </p>
+                <h5><b>Step 3.2 HTML Code</b></h5>
+                <textarea class="exampleCode" style="height: 180px;">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 center-block clearfix">
+                        <form class="input-group">
+                            <input class="form-control" type="text" id="patientName"
+                                   placeholder="Patient Last Name" autocomplete="off" />
+                            <span class="input-group-btn">
+				<button class="btn btn-default" type="submit"
+                        id="patientSearch">Search for Patient</button>
+			</span>
+                        </form>
+                    </div>
+                </div>
+                </textarea>
+                <p>
+                With Meteor still running from the command line, you should be able to simply reload the webpage in the browser and now see something like this:
+                </p>
+                <img class="center-block" src="../../../public/MeteorTutorial/patientsearchbox.png" style="width:600px"/>
+                <p>
+                You can type in a name and press enter in the box (or press the search button). At this point the visual elements of the search are present, but entering a name and clicking the search button doesn't do anything. To make these pieces work, we need to add some JavaScipt code to the <code>client/main.js</code> file. Find and open that file in your project <code>patient-todo/</code> directory, and delete the Meteor starter code so our blank JavaScript slate only contains 2 lines of code and looks like this:
+                </p>
+                <h5><b>Step 3.3 JavaScript Code</b></h5>
+                <pre>
+                import { Template } from 'meteor/templating'
+
+                import './main.html'
+                </pre>
+                <p>
+                These two lines tell our application to load the Meteor Templating engine and then tie this JavaScript file to the <code>main.html</code> webpage. Let's add two snippits of code beneath the <code>import './main.html'</code> line.
+                </p>
+                <p>
+                The first piece of code we will add will listen for a user to click (or press enter) on the "Search for Patient" button that we created on the webpage. To do this we add a code section called <code>events</code>. Copy and paste the code below into the <code>main.js</code> file.
+                </p>
+                <h5><b>Step 3.4 JavaScript Code</b></h5>
+                <pre>
+                Template.body.events({
+                'click #patientSearch' : function(event) {
+                event.preventDefault()
+
+                let name = $('#patientName').val()
+                Meteor.call('FHIRpatientSearch', name, function(err, res) {
+                Session.set('patientSearchList', res.entry)
+                })
+                },
+                //Insert Step 5.3 Code Here
+                //Insert Step 6.3 Code Here
+                //Insert Step 7.2 Code Here
+                //Insert Step 7.4 Code Here
+                })
+                //Insert Step 4.1 Code Here
+                </pre>
+                <p>
+                This code tells the webpage to listen for a click on the HTML element with an <code>id</code> of <code>patientSearch</code>. If you look back at the HTML we added above, you will see that the button we created has that <code>id</code>. So everytime the "Search" button is clicked the webpage will execute the code within this <code>'click #patientSearch'</code> function. The function itself retrieves the text that we entered into the <code>input</code> box and sends that information to our web app server in order to make a call via FHIR.
+                </p>
+                <p>
+                In order to make this function work, we need to add the server side code that sends the search query to the FHIR server. Let's do that now by editing the <code>main.js</code> file in the <code>patient-todo/server</code> directory. To the bottom of the <code>main.js</code> file, add the following code snippit:
+                </p>
+                <h5><b>Step 3.5 JavaScript Code</b></h5>
+                <pre>
+import { HTTP } from 'meteor/http'
+
+Meteor.methods({
+	FHIRpatientSearch : function (searchString) {
+
+		let result = HTTP.call('GET', "http://learnfhir.aidbox.io/fhir/Patient?family=" + searchString)
+
+		return JSON.parse(result.content)
+	},
+	// Step 5.4 Code Goes HERE
+	// Step 6.4 Code Goes HERE
+	// Step 7.5 Code Goes HERE
+	// Step 8.3 Code Goes HERE
+})
+</pre>
+                <p>
+                This code makes a request of the remote FHIR server (in this case "learnfhir.aidbox.io"). The request is to retrieve all <code>Patient</code> resources with a <code>family</code> name equal to the value of the input box from our web client. So when a user enters a name into the box and presses enter, that name is sent to the application server, which then performs a request of the FHIR sevrver to find all Patient records with that name and return the results. We then pass those results back to the user's web client.
+                </p>
+                <p>
+                To view those results in the webpage proceed to Step 4...
+                </p>
+            </div>
+
+            <div id="MeteorStep4" class="tab-pane fade">
+                <div>
+                    <h2 class="text-center">Step 4: Showing the Search Results</h2>
+                    <hr>
+                </div>
+                <p>
+                Now we need to show the patient search results in a list and allow users to select a patient or patients to follow.
+                </p>
+                <p>
+                Returning to the client code, the second code piece we will add defines some webpage "helpers". In Meteor, helpers can be thought of as placeholders or holes in the webpage. When the browser loads the webpage, these placeholders are filled in dynamically with data depending on how we define them in our JavaScript code. Add the following code to your <code>client/main.js</code> file:
+                </p>
+                <h5><b>Step 4.1 Code</b></h5>
+                <pre>
+                Template.body.helpers({
+                patientSearchResults : function () {
+                return Session.get('patientSearchList')
+                },
+                patientFirstName : function () {
+                return this.resource.name[0].given[0]
+                },
+                patientLastName : function () {
+                return this.resource.name[0].family[0]
+                },
+                patientId : function () {
+                return this.resource.id
+                },
+                //Insert Step 6.2 Code Here
+                //Insert Step 7.3 Code Here
+                //Insert Step 8.4 Code Here
+                })
+                </pre>
+                <p>
+                Now that we have defined the "helpers" in the JavaScript file we can use them in our HTML file in order to display the dynamic content in the webpage. Replace the "4.2 HTML" placeholder in the <code>client/main.html</code> file with the following code:
+                </p>
+                <h5><b>Step 4.2 Code</b></h5>
+                <textarea class="exampleCode" style="height: 120px;">
+                <br>
+                <ul class="list-group">
+                    {{|#if patientSearchResults}}
+                    {{|#each patientSearchResults}}
+                    <li class="list-group-item">{{|patientFirstName}} {{|patientLastName}}
+                        <span class="btn badge" id="addPatient" name="{{patientId}}">Add Patient</span>
+                    </li>
+                    {{|/each}}
+                    {{|/if}}
+                </ul>
+                </textarea>
+                <p>
+                Refresh your Meteor application/browser window. Then search for a patient by the name of "Hanson". After a few seconds, the webpage with search results should look like this:
+                </p>
+                <img class="center-block" src="../../../public/MeteorTutorial/patientlist.png" style="width:600px">
+                <p>
+                Don't be surprised if there is a bit of a delay before you see the search results. There can often be some lag for the first request to the FHIR server, however subsequent requests will perform better. You can also try searching for a patient by the last name 'Morrison'.
+                </p>
+                <p>
+                Proceed to Step 5...
+                </p>
+
+            </div>
+
+            <div id="MeteorStep5" class="tab-pane fade">
+                <div>
+                    <h2 class="text-center">Step 5: Adding a Patient Collection</h2>
+                    <hr>
+                </div>
+                <p>
+                The next functionality we want to add to the application is the ability to create a custom patient follow-up list. We will use one of the fundmental parts of Meteor to do this - a MongoDB database. MongoDB falls under the NoSQL class of databases. Individual records within a MongoDB are referred to as "Documents" and a set of documents together is called a "collection". Let's build a collection of patients by retrieving their information for the FHIR server and creating a "Patients" collection where each document represents a separate patient.
+                </p>
+                <p>
+                To create a new collection we will make a new file in the <code>/imports</code> sub-directory of our project. Imports are pieces of code that can be referenced by both the client or server. Create a file called <code>Patients.js</code> and save it in the <code>imports</code> directory. Copy and paste the following code snippit into the file:
+                </p>
+                <h5><b>Step 5.1 Code</b></h5>
+                <pre>
+                import { Mongo } from 'meteor/mongo'
+
+                export const Patients = new Mongo.Collection('patients')
+
+                if (Meteor.isClient) {
+                Meteor.subscribe('patients')
+                }
+
+                if (Meteor.isServer) {
+                Meteor.publish('patients', function PatientsPublication() {
+                return Patients.find({})
+                })
+                }
+                </pre>
+                <p>
+                Now, to load the collection on both the client and the server, we need to create a reference to the collection in the <code>main.js</code> files on both the client and server. Copy and add the following line of code at the beginning of both <code>client/main.js</code> and <code>server/main.js</code> files.
+                </p>
+                <h5><b>Step 5.2 Code</b></h5>
+                <pre>
+                import { Patients } from '../imports/Patients.js'
+                </pre>
+                <p>
+                Finally, we need a way to add patients to this collection. In Step 4 our patient list had a button to "Add Patient". Let's add an "event" function that will react when a user presses this button and adds the selected patient to our "Patients" collection. Open your <code>client/main.js</code> file and add the following code snippit to the <code>Template.body.events({</code> section so it looks like this:
+                </p>
+                <h5><b>Step 5.3 Code</b></h5>
+                <pre>
+                'click #addPatient' : function(event) {
+                event.preventDefault()
+                Meteor.call('addPatient', this)
+                },
+                </pre>
+                <p>
+                Now, create the addPatient function in the `server/main.js` file with the rest of the meteor methods.
+                </p>
+                <h5><b>Step 5.4 Code</b></h5>
+                <pre>
+                addPatient : function (patient) {
+
+                Patients.upsert({ _id : patient._id }, patient)
+                return
+                },
+                </pre>
+                <p>
+                This will add the patient to the database when you click the Add Patient button. Go ahead and try it in your browser.
+                </p>
+                <p>
+                As you will see, this will appear to do nothing since we aren't yet doing anything with the data. So, how do we know if the patient was actually added to the collection? Well, one way to confirm is to look at the MongoDB database directly. Meteor makes this easy to do from the command line. Open a new terminal window in the main directory and type:
+                </p>
+                <p>
+                <code>meteor mongo</code>
+                </p>
+                <p>
+                You should see something like this:
+                </p>
+                <img src="../../../public/MeteorTutorial/meteormongo.png" style="height:600px">
+                <p>
+                At the Mongo prompt type:
+                </p>
+                <p>
+                <code>db.patients.find({})</code>
+                </p>
+                <p>
+                This command will "find" all the patients in your database. If you have successfully added patient "Hanson" to your Patients collection then you should see something like the following:
+                </p>
+
+                <img src='../../../public/MeteorTutorial/mongoquery.png' style="height:500px">
+                <p>
+                Now that we can add patients of interest to a collection, let's add the necessary components to display and manage the patient follow-up list on our webpage.
+                </p>
+                <p>
+                Proceed to Step 6...
+                </p>
+            </div>
+
+            <div id="MeteorStep6" class="tab-pane fade">
+                <p>
+                Now that we have a patient collection in our database that we can use for follow-up, let's work on displaying that collection in the webpage. We will add a new section to the main.HTML file that will show the patient list. Add the following code to the HTML file in the designated location:
+                </p>
+                <h5><b>Step 6.1 Code</b></h5>
+                <textarea class="exampleCode" style="height: 240px;">
+                <hr>
+                <div class="col-md-6">
+                    <h2>Patient List</h2>
+                    <div class="list-group">
+                        {{|#each patients}}
+                        <button class="list-group-item chosenPatient">
+                            {{|#each resource.name}}
+                            {{|family}}, {{|given}}
+                            {{|/each}}
+                            <span class="btn badge" id="removePatient" name="{{|resource.id}}">Remove Patient</span>
+                        </button>
+                        {{|/each}}
+                    </div>
+                </div>
+                </textarea>
+                <p>
+                If you save the <code>client/main.html</code> file and refresh the website you should now see something like this:
+                </p>
+                <img src="../../../public/MeteorTutorial/patientlist1.png" style="height:400px">
+                <p>
+                But you will notice that beyond the "Patient List" title, we are not seeing any selected patients. We should be seeing patient "Hanson" since we added that patient to the follow-up list in the previous step, and confirmed the addition of the data to the database. This is because we need to define a new "helper" in the JavaScript code that will display the database list on the webpage. To do this, copy the following code into the noted location in `client/main.js`:
+                </p>
+
+                <h5><b>Step 6.2 Code</b></h5>
+                <pre>
+                patients : function () {
+                return Patients.find({})
+                },
+                </pre>
+                <p>
+                Now, when you save the file and refresh the webpage you should see something like this:
+                </p>
+                <img src="../../../public/MeteorTutorial/patientlist2.png" style="height:400px">
+                <p>
+                The patient follow-up list is now populated below the patient search box. Fantastic!
+                </p>
+                <p>
+                The is one additional button that we would like to make functional. You will see that the follow-up patient list members each has a button to remove the patient from the list. To make this button functional we need to add two components - an event listener which tells the website what to do when a user clicks the "Remove" patient button, and a function which removes that particular patient from the database.
+                </p>
+                <p>
+                First, let's add the button click event listener. Add the following code to the <code>client/main.js</code> file.
+                </p>
+                <h5><b>Step 6.3 Code</b></h5>
+                <pre>
+                'click #removePatient' : function (event) {
+                event.preventDefault()
+                Meteor.call('removePatient', this)
+                },
+                </pre>
+                <p>
+                Next, add the following code to the <code>server/main.js</code> file. This code snippit will match any database record with the matching patient Id. In this implementation, each patient has a unique Id value.
+                </p>
+                <h5><b>Step 6.4 Code</b></h5>
+                <pre>
+                removePatient : function (patient) {
+
+                Patients.remove({ _id : patient._id })
+                return
+                },
+                </pre>
+                <p>
+                Once both of these pieces of code have been added, you should be able to search for a patient, add them to the follow-up list, and delete them from the follow-up list. In the picture below, the patient by the last name "Hanson" has been removed from the follow-up list and a patient by the last name of Morrison has been added instead.
+                </p>
+                <img src="../../../public/MeteorTutorial/patientlist3.png" style="height:400px">
+                <h4>
+                To create a "To-Do" list for each follow-up patient, proceed to Step 7...
+                </h4>
+            </div>
+
+            <div id="MeteorStep7" class="tab-pane fade">
+
+                The first order of business is to create the ability to add a CarePlan task for a given patient. Since we are using patients from our AidBox.io FHIR server, no CarePlan tasks exist yet. The first section of code that we will add will create an input box and button similar to the patient search box. When a patient enters a new task we will turn that task into a FHIR CarePlan resource and send it to the FHIR server. Copy the following HTML into you <code>client/main.html</code> file in the appropriate spot:
+
+                <h5><b>Step 7.1 Code</b></h5>
+                <textarea class="exampleCode" style="height: 200px;">
+                <div class="col-md-6">
+                    <h2>Todo List</h2>
+                    {{|#if selectedPatient}}
+                    <form class="input-group">
+                        <input type="text" class="form-control" id="newTask" placeholder="Type to add new tasks" autocomplete="off" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" id="addTask">Add Task</button>
+                        </span>
+                    </form>
+                    {{|/if}}
+                    <!-- Step 8.1 HTML code goes HERE -->
+                </div>
+                </textarea>
+                <p>
+                This will add a new "ToDo" list section to the right side of the screen, underneath the patient search box. We only want the input box to display when a patient has been selected. To do this we will add a new Session variable to hold the name of the selected patient and an event handler to tell the webpage when a patient has been selected from the Patient List. Add the following pieces of code in to the <code>client/main.js</code> file:
+                </p>
+                <h5><b>Step 7.2 Code</b></h5>
+                <pre>
+                'click .chosenPatient' : function () {
+                Session.set('selectedPatient', this.resource.id)
+                },
+                </pre>
+
+                <h5><b>Step 7.3 Code</b></h5>
+                <pre>
+                selectedPatient : function () {
+                return Session.get('selectedPatient')
+                },
+                </pre>
+                <p>
+                Save the file and refresh your webpage. Now when you click on a patient in the Patient List you should see the input box to add a new task. We will get to displaying and changing the status of new tasks in the next couple of steps. The web page should now look like this:
+                </p>
+                <img src="../../../public/MeteorTutorial/todolistinput.png" style="height:400px">
+                <p>
+                Now we need to add the code to create a new CarePlan task when a user pushes the "Add Task" button. Similar to previous steps, we will first add an "event" handler in the <code>client/main.js</code> file and then we will add code in the <code>server/main.js</code> file that will send our newly created CarePlan resource to the FHIR server.
+                </p>
+                <p>
+                Open the <code>client/main.js</code> file and add the following code snippet to the <code>Templates.body.events({})</code> section:
+                </p>
+                <h5><b>Step 7.4 Code</b></h5>
+                <pre>
+                'click #addTask' : function (event) {
+                event.preventDefault()
+                Meteor.call('FHIRaddCarePlan', $('#newTask').val(), Session.get('selectedPatient'))
+                updateTaskList(Session.get('selectedPatient'))
+                },
+                </pre>
+                <p>
+                Next, open the <code>server/main.js</code> file and add the following code to the <code>Meteor.methods({})</code> section:
+                </p>
+                <h5><b>Step 7.5 Code</b></h5>
+                <pre>
+                FHIRaddCarePlan : function (task, patientId) {
+
+                let CarePlan = {
+                "resourceType" : "CarePlan",
+                "status" : "active",
+                "subject" : {
+                "reference" : "Patient/" + patientId
+                },
+                "description" : task
+                }
+
+                HTTP.call('POST', "http://learnfhir.aidbox.io/fhir/CarePlan", { data: CarePlan })
+                return
+                },
+                </pre>
+                <P>
+                Now when a user types a task and selects "Add Task" the website will send that task to the server, which will then format it into a proper CarePlan resource, and then write that resource to the FHIR server.
+                </P>
+                <p>
+                If we type "Get Chest X-ray" into the input box and click "Add Task" nothing will happen, at least not that we can see. This is because we haven't added the code yet to display the list (Step 8). But the information should have made its way to the FHIR server. If we query the FHIR server directly, we should be able to find our CarePlan task.
+                </p>
+                <p>
+                Open a new browser window and type <code>learnFHIR.aidbox.io/fhir/CarePlan</code> (case sensitive) into the address bar. This will query the FHIR server for all CarePlan resources. You should get a response that looks like this:
+                </p>
+                <img src="../../../public/MeteorTutorial/careplanfhirquery.png" style="height:400px">
+                <h4>
+                Proceed to Step 8 to display the ToDo list in the webpage...
+                </h4>
+            </div>
+            <div id="MeteorStep8" class="tab-pane fade">
+                <p>
+                Now let's add the code to see the task list for a selected patient. We will first add the HTML code in to the <code>client/main.html</code> file, and then add the JavaScript to support the HTML elements. Copy and paste the following code into the appropriate spot:
+                </p>
+                <h5><b>Step 8.1 Code</b></h5>
+                <textarea class="exampleCode" style="height: 200px;">
+                <hr>
+                <ol class="list-group">
+                    {{|#each patientTasks}}
+                    <li class="list-group-item">
+                        {{|#if status "completed"}}
+                        <del>{{|this.resource.description}}</del>
+                        {{|else}}
+                        {{|this.resource.description}}
+                        {{|/if}}
+                        <div class="pull-right">
+                            <button class="btn btn-xs" id="toggleStatus">{{|this.resource.status}}</button>
+                            <button class="btn btn-xs" id="deleteTask">&times;</button>
+                        </div>
+                    </li>
+                    {{|/each}}
+                </ol>
+                </textarea>
+                <p>
+                If you save and refresh the website you will not see any changes yet. That is because we need to first load the CarePlan task list from the FHIR server. Since every time we add, change, or deleta a task we will want to refresh the ToDo List, let's add a generic function we can call at any time to get an updated list of CarePlan tasks. At the bottom of your <code>client/main.js</code> file, add the following code. This code will go outside and below the <code>Template.body.events</code> and <code>Template.body.helpers</code> sections:
+                </p>
+                <h5><b>Step 8.2 Code</b></h5>
+                <pre>
+                function updateTaskList(patientId) {
+                Meteor.call('FHIRgetCarePlan', patientId, function (err, res) {
+                Session.set('patientTasks', res.entry)
+                })
+                }
+                </pre>
+                <p>
+                Next we need to add the corresponding function on our server to retrieve the CarePlan tasks from the remote FHIR server. To do this, add the following code to the <code>server/main.js</code> file.
+                </p>
+                <h5><b>Step 8.3 Code</b></h5>
+                <pre>
+                FHIRgetCarePlan : function (patientId) {
+                let result = HTTP.call('GET', "http://learnfhir.aidbox.io/fhir/CarePlan?patient=" + patientId)
+                return JSON.parse(result.content)
+                },
+                </pre>
+                <p>
+                Finally, create a "helper" in the <code>client/main.js</code> file to supply the HTML with our patient ToDo list:
+                </p>
+                <h5><b>Step 8.4 Code</b></h5>
+                <pre>
+                patientTasks : function () {
+                return Session.get('patientTasks')
+                },
+                </pre>
+                <p>
+                After all this, if you save and refresh the webpage you still won't see a ToDo List. Why not? Because we have yet to call our <code>updateTaskList()</code> function. We will want to load/update the displayed ToDo list every time a patient is selected from the Patient List, and so we should call the <code>updateTaskList()</code> function from our <code>chosenPatient</code> event handler. Edit the code in your <code>client/main.js</code> file so that the <code>'click .chosenPatient'</code> function now looks like this:
+                </p>
+                <h5><b>Step 8.5 Code</b></h5>
+                <pre>
+                'click .chosenPatient' : function () {
+                Session.set('selectedPatient', this.resource.id)
+                updateTaskList(this.resource.id)
+                },
+                </pre>
+                <p>
+                This will call the <code>updateTaskList()</code> every time a patient is selected from the Patient List. Save the file and try this now. Your webpage should now look like this (if you added a Task in Step 7)
+                </p>
+                <img src="../../../public/MeteorTutorial/todolistitem.png" style="height:400px">
+
+                <p>
+                The final step will allow us to delete and change the status of ToDo List tasks.
+                </p>
+                <h4>
+                Proceed to Step 9...
+                </h4>
+            </div>
+
+            <div id="MeteorStep9" class="tab-pane fade">
+
+                <p>
+                For our final step, we will add the ability to modify an existing CarePlan task. This will be reflected not only on the webpage, but in the CarePlan resource on the FHIR server as well. Similar to what we've done in several prior steps, we will first add event handlers to the <code>client/main.js</code> code, then functions in the <code>server/main.js</code> that talk to the FHIR server, then a new helper in the <code>client/main.js</code> along with the slight changes to the HTML to make it easier to see what the status of a task is.
+                </p>
+                <p>
+                Let's start by adding those new event handlers in the <code>client/main.js</code> file:
+                </p>
+                <h5><b>Step 9.1 Code</b></h5>
+                <pre>
+                'click #toggleStatus' : function (event) {
+                event.preventDefault()
+                Meteor.call('FHIRtoggleCarePlanStatus', this.resource)
+                updateTaskList(Session.get('selectedPatient'))
+                },
+                'click #deleteTask' : function (event) {
+                event.preventDefault()
+                Meteor.call('FHIRdeleteCarePlan', this.resource)
+                updateTaskList(Session.get('selectedPatient'))
+                }
+                </pre>
+                <p>
+                Then continue by adding the corresponding functions in the <code>server/main.js</code> file:
+                </p>
+                <h5><b>Step 9.2 Code</b></h5>
+                <pre>
+                FHIRtoggleCarePlanStatus : function (carePlan) {
+                carePlan.status = carePlan.status == "active" ? "completed" : "active"
+                HTTP.call('PUT', "http://learnfhir.aidbox.io/fhir/CarePlan/" + carePlan.id, { data : carePlan })
+                },
+                FHIRdeleteCarePlan : function (carePlan) {
+                HTTP.call('DELETE', "http://learnfhir.aidbox.io/fhir/CarePlan/" + carePlan.id)
+                },
+                </pre>
+                <p>
+                With those code sections added above you should now be able to delete a ToDo List task and modify it from "active" to "completed". To make it a little more visually intuitive, lets change the color of a task depending on its status. To do this we will add a helper that will allow our HTML to query the status of a given task and set some display parameters accordingly.
+                </p>
+                <P>
+                For the last time, open the <code>client/main.js</code> file and add the following code the the <code>Template.body.helpers({})</code> section:
+                </P>
+                <h5><b>Step 9.3 Code</b></h5>
+                <PRE>
+                status : function(status) {
+                return this.resource.status == status
+                },
+                </PRE>
+                <p>
+                    Now let's alter our existing HTML so that it changes how each ToDo List task looks depending on the CarePlan status. Locate the HTML element under the ToDo List section that begins with <code>&lt;li class="list-group-item"&gt;</code>. Edit both the class attribute of the <code>&lt;li&gt;</code> element as well as the code within the list item so it looks like this:
+                </p>
+                <h5><b>Step 9.4 Code</b></h5>
+                <textarea class="exampleCode" style="height: 200px;">
+                <li class="list-group-item {{|#if status "completed"}}list-group-item-danger{{|else}}list-group-item-success{{|/if}}">
+                {{|#if status "completed"}}
+                <del>{{|this.resource.description}}</del>
+                {{|else}}
+                {{|this.resource.description}}
+                {{|/if}}
+                <div class="pull-right">
+                    <button class="btn btn-xs" id="toggleStatus">{{|this.resource.status}}</button>
+                    <button class="btn btn-xs" id="deleteTask">&times;</button>
+                </div>
+                </li>
+                </textarea>
+                <P>
+                Now when you complete a task the list items should look like this:
+                </P>
+                <img src="../../../public/MeteorTutorial/finishedproduct.png" style="height:400px">
+                <h3>
+                You have completed the tutorial! Good luck with your FHIR adventures.
+                </h3>
+            </div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>

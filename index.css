@@ -1,0 +1,58 @@
+.navbar-custom {
+    background-color:#ffffff;
+    color:#000000;
+    border-radius:0;
+    border-bottom:2px solid black;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#000000;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #000000;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #ffa500;
+}
+
+.navbar-custom .navbar-brand {
+    color:#000000;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#33aa33;
+}
+
+.exampleCode {
+    width:100%;
+    background-color:#f5f5f5;
+    outline: none;
+    padding-top: 5px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    line-height: 1.42857143;
+    font-size: 13px;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
+
+.text-white {
+    color: white;
+}

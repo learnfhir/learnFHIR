@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>LearnFHIR - FHIR Resources</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../index.css" />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <!-- basic header -->
+
+    <div class="container">
+        <nav class="navbar navbar-custom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand">LearnFHIR - FHIR Resources</span>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="http://github.com/learnfhir" target="_blank">GitHub</a></li>
+                    <li><a href="../../../pages/references/references.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    </div>
+    <!-- main content -->
+    <div class="container">
+        <h3 id="understandingfhir">Understanding FHIR</h3>
+        <p>
+            What is FHIR, really? It is a data representation and messaging standard. I think the following quotation from HL7 summarizes the whole concept very nicely:
+        </p>
+        <blockquote>
+            The FHIR specification defines a set of resources, and an infrastructure for handling resources. In order to use FHIR to create solutions for integration requirements, implementers must map their problems to resources and their content.
+        </blockquote>
+        <p>
+            The data can be represented in several formats including XML and JavaScript Object Notation (JSON). Since the goal of this website is to bring viewers up to speed on creating FHIR applications, I will focus on the JSON notation, since this is easily used in web programming for exchanging and manipulating data.
+        </p>
+        <h4>Resources</h4>
+        <p>
+            FHIR Resources are the basic data unit of the standard. A FHIR Resource is formally defined as follows:
+        </p>
+        <blockquote>
+            <p> resource is an entity that:</p>
+            <ul>
+
+                <li>has a known identity (a URL) by which it can be addressed</li>
+                <li>identifies itself as one of the types of resource defined in this specification</li>
+                <li>contains a set of structured data items as described by the definition of the resource type</li>
+                <li>has an identified version that changes if the contents of the resource change</li>
+            </ul>
+        </blockquote>
+
+        <p>
+            <a href="https://www.hl7.org/fhir/overview-arch.html#framework">See the rest of the formal definition here.</a>
+        </p>
+        <p>
+            When working with FHIR we will be querying for or writing to individual or sets of Resources. Currently in DSTU3 there are [**118 FHIR Resources**](https://www.hl7.org/fhir/resourcelist.html) with more in the pipeline. You can read the ongoing discussion about new resources [**here**](http://wiki.hl7.org/index.php?title=FHIR_Resource_Types#Unsure).
+        </p>
+        <h3>Classification</h3>
+        <p>
+            FHIR Resources have been mapped to an ontology to provide consistent meaning. The main classification of FHIR Resources breaks down into 6 categories
+        </p>
+        <ul>
+            <li>Clinical - The content of a clinical record</li>
+            <li>Identification - Supporting entities involved in the care process</li>
+            <li>Workflow - Manage the healthcare process</li>
+            <li>Financial - Resources that support the billing and payment parts of FHIR</li>
+            <li>Conformance - Resources use to manage specification, development and testing of FHIR solutions</li>
+            <li>Infrastructure - General functionality, and resources for internal FHIR requirements</li>
+        </ul>
+
+
+        <h3>Resource Breakdown</h3>
+        <img src="../../../public/FHIRresource_comparison.png" height="600px">
+
+        <h3>Example: Condition</h3>
+        <h4>Resource Definition</h4>
+        <textarea class="exampleCode" style="height:450px;">
+        
+        {
+        "resourceType" : "Condition",
+        "identifier" : [{ Identifier }], // External Ids for this condition
+        "clinicalStatus" : "<code>
+            ", // C? active | recurrence | inactive | remission | resolved
+            "verificationStatus" : "<code>
+                ", // C? provisional | differential | confirmed | refuted | entered-in-error | unknown
+                "category" : [{ CodeableConcept }], // problem-list-item | encounter-diagnosis
+                "severity" : { CodeableConcept }, // Subjective severity of condition
+                "code" : { CodeableConcept }, // Identification of the condition, problem or diagnosis
+                "bodySite" : [{ CodeableConcept }], // Anatomical location, if relevant
+                "subject" : { Reference(Patient|Group) }, // R!  Who has the condition?
+                "context" : { Reference(Encounter|EpisodeOfCare) }, // Encounter or episode when condition first asserted
+
+                // onset[x]: Estimated or actual date,  date-time, or age. One of these 5:
+                "onsetDateTime" : "<dateTime>
+                    ",
+                    "onsetAge" : { Age },
+                    "onsetPeriod" : { Period },
+                    "onsetRange" : { Range },
+                    "onsetString" : "<string>
+                        ",
+
+                        // abatement[x]: If/when in resolution/remission. One of these 6:
+                        "abatementDateTime" : "<dateTime>
+                            ",
+                            "abatementAge" : { Age },
+                            "abatementBoolean" : <boolean>
+                                ,
+                                "abatementPeriod" : { Period },
+                                "abatementRange" : { Range },
+                                "abatementString" : "<string>
+                                    ",
+                                    "assertedDate" : "<dateTime>
+                                        ", // Date record was believed accurate
+                                        "asserter" : { Reference(Practitioner|Patient|RelatedPerson) }, // Person who asserts this condition
+                                        "stage" : { // Stage/grade, usually assessed formally
+                                        "summary" : { CodeableConcept }, // C? Simple summary (disease specific)
+                                        "assessment" : [{ Reference(ClinicalImpression|DiagnosticReport|Observation) }] // C? Formal record of assessment
+                                        },
+                                        "evidence" : [{ // Supporting evidence
+                                        "code" : [{ CodeableConcept }], // C? Manifestation/symptom
+                                        "detail" : [{ Reference(Any) }] // C? Supporting information found elsewhere
+                                        }],
+                                        "note" : [{ Annotation }] // Additional information about the Condition
+                                        }
+                                        
+ </textarea>
+    </div>
+</body>
+</html>
